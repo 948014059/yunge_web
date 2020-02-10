@@ -77,11 +77,6 @@
         this.$axios({method:'post',
         url: this.url,
         data:json_data,
-        onUploadProgress:function(prigressEvent){
-          if (progressEvent.lengthComputable){
-
-          }
-        }
         }).then(res=>{
           // console.log(res)
           // this.od_base64=res.data.base64_data
