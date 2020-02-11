@@ -6,6 +6,8 @@ const routerOptions = [
   { path: '*', component: 'NotFound' },
   { path:'/mnist',component:'MNIST'},
   { path:'/yolov3',component:'YOLO3'},
+  { path:'/face',component:'FACE_'},
+  { path:'/image_net',component: 'IMAGENET'},
   // { path: '/CatVsDog', component:'CatVsDog'}
 ]
 
