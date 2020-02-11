@@ -17,7 +17,7 @@
         <div class="loading">
         <div class="spinner-border" style="" role="status">
         </div>
-         <span>{{upload_flag}}</span>
+         <span>{{upload_flag.pro}}</span>
         </div>
 
       </div>
@@ -34,8 +34,8 @@
       return{
         hidden_:false,
         image_base64:'',
-        upload_show:true,
-        upload_flag:'上传图片中...0%'
+        upload_show:false,
+        upload_flag:{'pro':'上传图片中...0%'},
       }
     },
     methods:{
@@ -73,13 +73,26 @@
         }
       },
       post_image(){
+        let  that=this
+        this.upload_show=true
         let json_data={'base64':this.image_base64}
         this.$axios({method:'post',
         url: this.url,
         data:json_data,
+        onUploadProgress:function (e) {
+            var complete=(e.loaded/e.total*100|0)+'%'
+            that.$set(that.upload_flag,'pro','上传图片中...'+complete)
+            // this.upload_flag='上传图片中...'+complete
+            // console.log('上传图片中...'+complete)
+        },
+        onDownloadProgress:function (e) {
+            var complete = (e.loaded/e.total*100|0)+'%'
+            that.$set(that.upload_flag,'pro','下载图片中...'+complete)
+        }
         }).then(res=>{
           // console.log(res)
           // this.od_base64=res.data.base64_data
+          this.upload_show=false
           this.$emit('returnres',res.data)
 
         })

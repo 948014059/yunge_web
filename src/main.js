@@ -15,6 +15,7 @@ Viewer.setDefaults({
 })
 
 //网络请求
+axios.defaults.baseURL='http://192.168.1.103:8888/'
 Vue.prototype.$axios=axios
 Vue.config.productionTip = false
 Vue.use(vueAxios,axios)
