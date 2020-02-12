@@ -8,6 +8,7 @@ const routerOptions = [
   { path:'/yolov3',component:'YOLO3'},
   { path:'/face',component:'FACE_'},
   { path:'/image_net',component: 'IMAGENET'},
+  { path:'/quick_draw',component:'QUICKDRAW'}
   // { path: '/CatVsDog', component:'CatVsDog'}
 ]
 
