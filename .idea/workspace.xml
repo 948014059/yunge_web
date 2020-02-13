@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FACE_.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FACE_.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IMAGENET.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IMAGENET.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/YOLO3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/YOLO3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/plant.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/plant.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yunge_flask" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -94,7 +87,9 @@
       <workItem from="1581390911089" duration="20119000" />
       <workItem from="1581472190253" duration="7105000" />
       <workItem from="1581487296442" duration="3096000" />
-      <workItem from="1581492090493" duration="3697000" />
+      <workItem from="1581492090493" duration="6056000" />
+      <workItem from="1581556586368" duration="519000" />
+      <workItem from="1581558054173" duration="12259000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -117,26 +112,41 @@
       <option name="project" value="LOCAL" />
       <updated>1581427559229</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="over yolo face imagenet,and some quickdraw">
+      <created>1581496789331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581496789331</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="over mnist and some yolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="over mnist and some yolo" />
+    <MESSAGE value="over yolo face imagenet,and some quickdraw" />
+    <option name="LAST_COMMIT_MESSAGE" value="over yolo face imagenet,and some quickdraw" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581327253730">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581427558272">
+    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581496788715">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1015" y="121" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1581328995724" />
-    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581427558272" />
+    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581496788715" />
+    <state x="1267" y="327" key="FileChooserDialogImpl" timestamp="1581558196347">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1581558196347" />
     <state x="1306" y="419" width="273" height="218" key="Github.ShareDialog" timestamp="1581302274330">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -150,16 +160,16 @@
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581427571080">
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581496796100">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1581329009888" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581427571080" />
-    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581492097270">
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581496796100" />
+    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581558054782">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1120" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581301433324" />
-    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581492097270" />
+    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581558054782" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -183,6 +193,12 @@
           <url>file://$PROJECT_DIR$/src/components/MNIST.vue</url>
           <line>14</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/QUICKDRAW.vue</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
