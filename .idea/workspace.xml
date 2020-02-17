@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/robot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/robot1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/vs.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/plant.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/plant.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CatVsDog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CatVsDog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yunge_flask" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -95,6 +96,8 @@
       <workItem from="1581558054173" duration="18903000" />
       <workItem from="1581643438969" duration="1115000" />
       <workItem from="1581646103648" duration="2309000" />
+      <workItem from="1581925255133" duration="6992000" />
+      <workItem from="1581941612604" duration="5317000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -131,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581572920846</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-catvsdog">
+      <created>1581925328391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581925328392</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,17 +153,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="over mnist and some yolo" />
     <MESSAGE value="over yolo face imagenet,and some quickdraw" />
-    <option name="LAST_COMMIT_MESSAGE" value="over yolo face imagenet,and some quickdraw" />
+    <MESSAGE value="-catvsdog" />
+    <option name="LAST_COMMIT_MESSAGE" value="-catvsdog" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581327253730">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581572920398">
+    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581925312375">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1015" y="121" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1581328995724" />
+    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581925312375" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
     <state x="1267" y="327" key="FileChooserDialogImpl" timestamp="1581925264177">
       <screen x="0" y="0" width="2560" height="1040" />
@@ -173,10 +185,11 @@
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581572932074">
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581925390571">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1581329009888" />
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581925390571" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
     <state x="1493" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581646104378">
       <screen x="0" y="0" width="2560" height="1040" />
@@ -211,6 +224,12 @@
           <url>file://$PROJECT_DIR$/src/components/QUICKDRAW.vue</url>
           <line>14</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/upload.vue</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -13,11 +13,11 @@
           </div>
         </div>
      </div>
-
+    <div class="bottom">————更多体验开发中————</div>
   </div>
 </template>
 
-
+———————
 <script>
   export default {
     data(){
