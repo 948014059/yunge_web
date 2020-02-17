@@ -26,7 +26,7 @@
         config: {
           lineWidth: 1,
           lineColor: '#ffffff',
-          shadowBlur: 5,
+          shadowBlur: 4,
           background:'#ff9770'
         }
       }

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/robot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/robot1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/plant.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/plant.vue" afterDir="false" />
@@ -54,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PythonWorkFile\Pycharm_\work_files\yunge_web\src\assets" />
       <recent name="D:\work_files\yunge_web\src\components" />
       <recent name="D:\work_files\yunge_web\src\assets" />
     </key>
@@ -89,7 +92,9 @@
       <workItem from="1581487296442" duration="3096000" />
       <workItem from="1581492090493" duration="6056000" />
       <workItem from="1581556586368" duration="519000" />
-      <workItem from="1581558054173" duration="12259000" />
+      <workItem from="1581558054173" duration="18903000" />
+      <workItem from="1581643438969" duration="1115000" />
+      <workItem from="1581646103648" duration="2309000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -119,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581496789331</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="over yolo face imagenet,and some quickdraw">
+      <created>1581572920846</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581572920846</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,14 +150,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581496788715">
+    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581572920398">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1015" y="121" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1581328995724" />
-    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581496788715" />
-    <state x="1267" y="327" key="FileChooserDialogImpl" timestamp="1581558196347">
+    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
+    <state x="1267" y="327" key="FileChooserDialogImpl" timestamp="1581925264177">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
+    <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581925264177" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1581558196347" />
     <state x="1306" y="419" width="273" height="218" key="Github.ShareDialog" timestamp="1581302274330">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -160,16 +173,16 @@
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581496796100">
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581572932074">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1581329009888" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581496796100" />
-    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581558054782">
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
+    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581646104378">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1120" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581301433324" />
-    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581558054782" />
+    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581646104378" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -197,7 +210,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/QUICKDRAW.vue</url>
           <line>14</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
