@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CatVsDog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CatVsDog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\YOLO\work_files\yunge_web\src\assets" />
       <recent name="D:\PythonWorkFile\Pycharm_\work_files\yunge_web\src\assets" />
       <recent name="D:\work_files\yunge_web\src\components" />
       <recent name="D:\work_files\yunge_web\src\assets" />
@@ -108,6 +112,8 @@
       <workItem from="1581646103648" duration="2309000" />
       <workItem from="1581925255133" duration="6992000" />
       <workItem from="1581941612604" duration="18646000" />
+      <workItem from="1582009192209" duration="336000" />
+      <workItem from="1582009729117" duration="10319000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -181,15 +187,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="-catvsdog" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1158" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582015281769">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1158" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1582015281769" />
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581327253730">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581954364573">
+    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581997585959">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1015" y="121" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1581328995724" />
-    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581954364573" />
+    <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997585959" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
     <state x="1267" y="327" key="FileChooserDialogImpl" timestamp="1581925264177">
       <screen x="0" y="0" width="2560" height="1040" />
@@ -209,17 +219,21 @@
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581954371308">
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581997595338">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1581329009888" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581954371308" />
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997595338" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
-    <state x="1493" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581646104378">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1582009878776">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581301433324" />
+    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582009878776" />
     <state x="1493" y="346" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581646104378" />
+    <state x="1103" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1582015382882">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1103" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1582015382882" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,7 +266,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/upload.vue</url>
           <line>13</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

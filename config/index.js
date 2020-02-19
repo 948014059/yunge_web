@@ -45,10 +45,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, 'D:/PythonWorkFile/Pycharm_/work_files/yunge_flask/dist/index.html'),
+    index: path.resolve(__dirname, 'E:/YOLO/work_files/yunge_flask/dist/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, 'D:/PythonWorkFile/Pycharm_/work_files/yunge_flask/dist'),
+    assetsRoot: path.resolve(__dirname, 'E:/YOLO/work_files/yunge_flask/dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
 

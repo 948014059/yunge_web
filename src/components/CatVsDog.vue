@@ -20,7 +20,7 @@
                   <div class="back">
                     <div class="back_upload" @click="uploadclick">
                       <span  v-if="!hidden_">+</span>
-                      <img :src="image_base64" alt="">
+                      <img :src="image_base64" alt="" >
                     </div>
                   </div>
                 </div>
@@ -64,8 +64,8 @@
 
               <div class="back_mobile">
                 <div class="back_upload_mobile" @click="uploadclick">
-                  <span  v-if="!hidden_">+</span>
-                  <img :src="image_base64" alt="">
+<!--                  <span  v-if="!hidden_">+</span>-->
+                  <img :src="image_base64" alt="" class="uploadimg">
                 </div>
               </div>
 
@@ -113,6 +113,7 @@
         let files=document.querySelector('#cd_upload').files[0]
         // this.imgDataUrl =this.getObjectURL(files)
         this.image_to_base64(files)
+          this.auto_img()
         this.hidden_=true
         // this.post_image()
         },
@@ -168,11 +169,18 @@
           this.upload_show=false
           this.$set(this.par,'cat_par',res.data.cat_par)
           this.$set(this.par,'dog_par',res.data.dog_par)
-          document.querySelector('.bar_1').style.width=res.data.dog_par+'%'
-          document.querySelector('.bar_2').style.width=res.data.cat_par+'%'
 
-          // document.querySelector('.bar_2').style.width=res.data.cat_par+'%'
-          // document.querySelector('.bar_2').style.width=res.data.cat_par+'%'
+          if (this.isPc()){
+            document.querySelector('.bar_1').style.width=res.data.dog_par+'%'
+          document.querySelector('.bar_2').style.width=res.data.cat_par+'%'
+          }
+          else {
+            document.querySelector('#bar_1_mobile').style.width=res.data.dog_par+'%'
+            document.querySelector('#bar_2_mobile').style.width=res.data.cat_par+'%'
+          }
+
+
+
         })
       },
       isPc(){
@@ -188,9 +196,17 @@
         return flag
       },
 
+      auto_img(){
+          const back_upload_mobile =document.querySelector('.dog_bar_mobile')
+          const  auto_img=document.querySelector('.uploadimg')
+           // console.log(back_upload_mobile.offsetWidth)
+        auto_img.style.marginLeft=(back_upload_mobile.offsetWidth-2)+'px'
+          // auto_img.offsetLeft=back_upload_mobile.offsetLeft
+      }
       },
       mounted () {
           this.pc_show=this.isPc()
+
       }
     }
 </script>
@@ -377,7 +393,7 @@
     width: 100%;
     height: 50px;
     position: absolute;
-    top: 70%;
+    top: 80%;
   }
   .vs_pr_mobile{
     top: 0;
