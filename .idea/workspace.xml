@@ -4,9 +4,11 @@
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CatVsDog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CatVsDog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MNIST.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MNIST.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/upload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upload.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -113,7 +115,12 @@
       <workItem from="1581925255133" duration="6992000" />
       <workItem from="1581941612604" duration="18646000" />
       <workItem from="1582009192209" duration="336000" />
-      <workItem from="1582009729117" duration="10319000" />
+      <workItem from="1582009729117" duration="10696000" />
+      <workItem from="1582101834740" duration="49000" />
+      <workItem from="1583132050639" duration="258000" />
+      <workItem from="1583132505452" duration="36000" />
+      <workItem from="1583132550778" duration="3301000" />
+      <workItem from="1583222844855" duration="4765000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -171,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581954365031</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="-catvsdog">
+      <created>1582092400113</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582092400113</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,15 +209,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="1353" y="120" key="CommitChangelistDialog2" timestamp="1581997585959">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="1015" y="121" key="CommitChangelistDialog2" timestamp="1582092398592">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1015" y="121" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1581328995724" />
+    <state x="1015" y="121" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582092398592" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997585959" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
-    <state x="1267" y="327" key="FileChooserDialogImpl" timestamp="1581925264177">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="950" y="330" key="FileChooserDialogImpl" timestamp="1583132515960">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="950" y="330" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1583132515960" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581925264177" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1581558196347" />
     <state x="1306" y="419" width="273" height="218" key="Github.ShareDialog" timestamp="1581302274330">
@@ -219,16 +234,16 @@
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581997595338">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1581329009888" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997595338" />
-    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
-    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1582009878776">
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1582092409012">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582009878776" />
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582092409012" />
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997595338" />
+    <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
+    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1583132505889">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1120" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1583132505889" />
     <state x="1493" y="346" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581646104378" />
     <state x="1103" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1582015382882">
       <screen x="0" y="0" width="1920" height="1050" />

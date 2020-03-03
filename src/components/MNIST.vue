@@ -119,11 +119,11 @@
     methods:{
       change(data){
         this.context=data
-        let  data_={'base64':data}
+        let  data_={'base64':data,'ss':'555'}
         this.$axios({method:'post',
         url: this.url,
         data:data_}).then(res=>{
-          this.res=res.data.flag
+          this.res=res.data.p_list
           this.argmaxp=res.data.argmaxp
         })
       },

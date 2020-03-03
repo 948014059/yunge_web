@@ -23,7 +23,8 @@ Viewer.setDefaults({
 })
 
 //网络请求
-axios.defaults.baseURL='http://120.197.15.122:8888/'
+axios.defaults.headers.post["Content-type"] = "application/json"
+axios.defaults.baseURL='api/'
 Vue.prototype.$axios=axios
 Vue.config.productionTip = false
 Vue.use(vueAxios,axios)

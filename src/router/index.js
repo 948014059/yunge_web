@@ -9,7 +9,8 @@ const routerOptions = [
   { path:'/face',component:'FACE_'},
   { path:'/image_net',component: 'IMAGENET'},
   { path:'/quick_draw',component:'QUICKDRAW'},
-  { path: '/catVsdog', component:'CatVsDog'}
+  { path: '/catVsdog', component:'CatVsDog'},
+  { path: '/catvsdogs',component:'catvsdogs'}
 ]
 
 

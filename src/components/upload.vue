@@ -5,7 +5,7 @@
         <div class="image_show" @click="fileclick()">
           <span style="display: block;width: 100%;height: 100%;
           line-height: 350px;font-size: 100px;" v-if="!hidden_">+</span>
-          <img :src="image_base64" alt="">
+          <img :src="image_base64" alt="" v-if="hidden_">
         </div>
         <div class="left_bottom">
           <img :src="i" alt=""v-for="i in base64_lists" @click="change_image(i)">
