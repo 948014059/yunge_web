@@ -3,7 +3,7 @@
         <input type="file" name="image" id='file' class="image_file"
           @change="show_img($event)">
         <div class="image_show" @click="fileclick()">
-          <span style="display: block;width: 100%;height: 100%;
+          <span style="width: 100%;height: 100%;
           line-height: 350px;font-size: 100px;" v-if="!hidden_">+</span>
           <img :src="image_base64" alt="" v-if="hidden_">
         </div>
@@ -122,11 +122,17 @@
     height: 350px;
     margin: 0 auto;
     background: black;
+    /*position: absolute;*/
+    overflow: hidden;
   }
   .image_show img{
     /*margin-top: 10px;*/
     width: 100%;
     height: 100%;
+    /*display: none;*/
+    /*position: relative;*/
+    /*top: 0;*/
+    /*left: 0;*/
   }
   .image_show :hover{
     background: rgba(33, 181, 242, 0.32);
@@ -142,6 +148,7 @@
     margin: 1%;
     height: 100%;
     float: left;
+    /*position: fixed;*/
     display: block;
   }
   .left_bottom img:hover{
