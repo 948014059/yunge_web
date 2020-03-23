@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/after.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/before.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PoetryGan.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +59,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -114,7 +122,8 @@
       <workItem from="1583132050639" duration="258000" />
       <workItem from="1583132505452" duration="36000" />
       <workItem from="1583132550778" duration="3301000" />
-      <workItem from="1583222844855" duration="8733000" />
+      <workItem from="1583222844855" duration="9609000" />
+      <workItem from="1584944002950" duration="11473000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -186,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583227909494</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="api change">
+      <created>1583373219176</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583373219176</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +219,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="api change" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1022" y="190" key="#Inspections" timestamp="1584945596261">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1022" y="190" key="#Inspections/0.0.1920.1050@0.0.1920.1050" timestamp="1584945596261" />
     <state x="1158" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582015281769">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -211,16 +231,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="165" y="146" key="CommitChangelistDialog2" timestamp="1583227908118">
+    <state x="165" y="146" key="CommitChangelistDialog2" timestamp="1583373217319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="165" y="146" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1583227908118" />
+    <state x="165" y="146" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1583373217319" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997585959" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
-    <state x="950" y="330" key="FileChooserDialogImpl" timestamp="1583132515960">
+    <state x="950" y="330" key="FileChooserDialogImpl" timestamp="1584954227845">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="950" y="330" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1583132515960" />
+    <state x="950" y="330" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1584954227845" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581925264177" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1581558196347" />
     <state x="1306" y="419" width="273" height="218" key="Github.ShareDialog" timestamp="1581302274330">
@@ -231,15 +251,19 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1287" y="232" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581302282826" />
+    <state x="195" y="242" key="MultipleFileMergeDialog" timestamp="1583373399893">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="195" y="242" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1583373399893" />
     <state x="230" y="136" key="SettingsEditor" timestamp="1581390894532">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1583227917809">
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1583373425753">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1583227917809" />
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1583373425753" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997595338" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
     <state x="1120" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1583132505889">
@@ -284,6 +308,12 @@
           <url>file://$PROJECT_DIR$/src/components/upload.vue</url>
           <line>13</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/EC.vue</url>
+          <line>45</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
