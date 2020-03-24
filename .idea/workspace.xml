@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/after.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/before.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/letter_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PoetryGan.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PoetryGan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PoetryGan.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +116,7 @@
       <workItem from="1583132505452" duration="36000" />
       <workItem from="1583132550778" duration="3301000" />
       <workItem from="1583222844855" duration="9609000" />
-      <workItem from="1584944002950" duration="11473000" />
+      <workItem from="1584944002950" duration="18141000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -202,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583373219176</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="PoetryGan">
+      <created>1584956105188</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1584956105188</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +216,8 @@
     <MESSAGE value="over yolo face imagenet,and some quickdraw" />
     <MESSAGE value="-catvsdog" />
     <MESSAGE value="api change" />
-    <option name="LAST_COMMIT_MESSAGE" value="api change" />
+    <MESSAGE value="PoetryGan" />
+    <option name="LAST_COMMIT_MESSAGE" value="PoetryGan" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1022" y="190" key="#Inspections" timestamp="1584945596261">
@@ -231,10 +232,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="165" y="146" key="CommitChangelistDialog2" timestamp="1583373217319">
+    <state x="1113" y="228" key="CommitChangelistDialog2" timestamp="1584956103925">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="165" y="146" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1583373217319" />
+    <state x="1113" y="228" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1584956103925" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997585959" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
     <state x="950" y="330" key="FileChooserDialogImpl" timestamp="1584954227845">
@@ -260,10 +261,10 @@
     </state>
     <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
     <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1583373425753">
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1584956116562">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1583373425753" />
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1584956116562" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997595338" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
     <state x="1120" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1583132505889">

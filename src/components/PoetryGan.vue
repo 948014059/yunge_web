@@ -21,7 +21,7 @@
                   </div>
                 </div>
                 <input type="text" class="form-control"
-                       :value="text"
+                       v-model="text"
                        :placeholder="placeholder"
                        aria-label="Text input with segmented dropdown button">
               </div>
@@ -51,7 +51,7 @@
             '输入五言首句如：山亭秋色满'],
           choose:'随机生成',
           placeholder:'随机生成，无需输入数据',
-          url:'/',
+          url:'/post_poetry',
           text:'',
           poetry:'寒随穷律变，春逐鸟声开。\n初风飘带柳，晚雪间花梅。\n碧林青旧竹，绿沼翠新苔。\n芝田初雁去，绮树巧莺来。'
       }
@@ -73,8 +73,8 @@
           // console.log(res)
           // this.od_base64=res.data.base64_data
           // this.upload_show=false
-          this.$emit('returnres',res.data)
-
+          // this.$emit('returnres',res.data)
+          this.poetry=res.data.char
         })
       },
     },
@@ -159,7 +159,7 @@
   }
   .by_box{
     position: relative;
-    top: 100px;
+    top: 0;
     left: 130px;
   }
   .btn{
@@ -172,6 +172,8 @@
   .poetry{
     position: relative;
     top: 20px;
+    /*transition: all .5s ease ;*/
+    /*transform: translateX(-20px);*/
   }
 
 
