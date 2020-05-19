@@ -36,7 +36,17 @@
         </div>
 <!--        <div class="open btn btn-danger">打开</div>-->
       </div>
+      <div id="main" v-show="upload_show">
+        <div class="box">
 
+          <div class="loading">
+          <div class="spinner-border" style="" role="status">
+          </div>
+           <span>{{upload_flag.pro}}</span>
+          </div>
+
+        </div>
+      </div>
     </div>
 </template>
 
@@ -53,7 +63,9 @@
           placeholder:'随机生成，无需输入数据',
           url:'/post_poetry',
           text:'',
-          poetry:'寒随穷律变，春逐鸟声开。\n初风飘带柳，晚雪间花梅。\n碧林青旧竹，绿沼翠新苔。\n芝田初雁去，绮树巧莺来。'
+          poetry:'寒随穷律变，春逐鸟声开。\n初风飘带柳，晚雪间花梅。\n碧林青旧竹，绿沼翠新苔。\n芝田初雁去，绮树巧莺来。',
+          upload_show:false,
+          upload_flag:{'pro':'上传中...0%'},
       }
     },
     methods:{
@@ -64,16 +76,28 @@
         this.placeholder=this.placeholders[index]
       },
       post_data(){
+        this.upload_show=true
         var  json_data={'choose':this.choose,
         'text':this.text}
         this.$axios({method:'post',
         url: this.url,
         data:json_data,
+        onUploadProgress:function (e) {
+            var complete=(e.loaded/e.total*100|0)+'%'
+            that.$set(that.upload_flag,'pro','上传中...'+complete)
+            // this.upload_flag='上传图片中...'+complete
+            // console.log('上传图片中...'+complete)
+        },
+        onDownloadProgress:function (e) {
+            var complete = (e.loaded/e.total*100|0)+'%'
+            that.$set(that.upload_flag,'pro','下载中...'+complete)
+        }
         }).then(res=>{
           // console.log(res)
           // this.od_base64=res.data.base64_data
           // this.upload_show=false
           // this.$emit('returnres',res.data)
+          this.upload_show=false
           this.poetry=res.data.char
         })
       },
@@ -174,6 +198,34 @@
     top: 20px;
     /*transition: all .5s ease ;*/
     /*transform: translateX(-20px);*/
+  }
+  #main{
+    width: 100%;
+    height: 100%;
+  }
+  .box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 9;
+  }
+  .spinner-border{
+    width: 8rem;
+    height: 8rem;
+    color: white;
+  }
+  .loading{
+    width: 100%;
+    position: fixed;
+    top: 35%;
+  }
+  .loading span{
+    color: white;
+    display: block;
+    text-align: center;
   }
 
 
