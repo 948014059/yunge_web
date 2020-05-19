@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PoetryGan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PoetryGan.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CatVsDog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CatVsDog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FACE_.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FACE_.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IMAGENET.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IMAGENET.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MNIST.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MNIST.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/YOLO3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/YOLO3.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +54,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -63,7 +71,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -72,18 +80,6 @@
       <recent name="D:\work_files\yunge_web\src\components" />
       <recent name="D:\work_files\yunge_web\src\assets" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -116,7 +112,11 @@
       <workItem from="1583132505452" duration="36000" />
       <workItem from="1583132550778" duration="3301000" />
       <workItem from="1583222844855" duration="9609000" />
-      <workItem from="1584944002950" duration="18141000" />
+      <workItem from="1584944002950" duration="19143000" />
+      <workItem from="1585132232935" duration="1077000" />
+      <workItem from="1588133137659" duration="1569000" />
+      <workItem from="1589869780939" duration="775000" />
+      <workItem from="1589871980196" duration="3227000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -202,11 +202,18 @@
       <option name="project" value="LOCAL" />
       <updated>1584956105188</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="PoetryGan">
+      <created>1585021243286</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1585021243286</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
@@ -232,16 +239,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1161" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581327253730" />
-    <state x="1113" y="228" key="CommitChangelistDialog2" timestamp="1584956103925">
+    <state x="1011" y="75" key="CommitChangelistDialog2" timestamp="1585021242395">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1113" y="228" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1584956103925" />
+    <state x="1011" y="75" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585021242395" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997585959" />
     <state x="1353" y="120" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572920398" />
-    <state x="950" y="330" key="FileChooserDialogImpl" timestamp="1584954227845">
+    <state x="950" y="330" key="FileChooserDialogImpl" timestamp="1585187177008">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="950" y="330" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1584954227845" />
+    <state x="950" y="330" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1585187177008" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581925264177" />
     <state x="1267" y="327" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1581558196347" />
     <state x="1306" y="419" width="273" height="218" key="Github.ShareDialog" timestamp="1581302274330">
@@ -256,15 +263,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="195" y="242" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1583373399893" />
-    <state x="230" y="136" key="SettingsEditor" timestamp="1581390894532">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="922" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581301597838" />
-    <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1584956116562">
+    <state x="729" y="147" key="SettingsEditor" timestamp="1589875236623">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1584956116562" />
+    <state x="729" y="147" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1589875236623" />
+    <state x="230" y="136" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1581390894532" />
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2" timestamp="1585021250658">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1032" y="262" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585021250658" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040/2560.1005.1024.600@0.0.2560.1040" timestamp="1581997595338" />
     <state x="1376" y="260" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1581572932074" />
     <state x="1120" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1583132505889">
@@ -292,7 +299,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MNIST.vue</url>
-          <line>97</line>
+          <line>98</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -313,7 +320,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/EC.vue</url>
           <line>45</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

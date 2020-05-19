@@ -41,6 +41,7 @@
 <style scoped>
 .mnistbox{
   margin-top: 100px;
+  margin-bottom: 200px;
 }
 .v-enter,.v-leave-to{
     opacity: 0;

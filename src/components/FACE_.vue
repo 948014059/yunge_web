@@ -95,6 +95,7 @@
 <style scoped>
 .face_box{
   margin-top: 100px;
+  margin-bottom: 250px;
 }
     .obj_image{
     width: 100%;

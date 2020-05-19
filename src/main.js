@@ -24,7 +24,8 @@ Viewer.setDefaults({
 
 //网络请求
 axios.defaults.headers.post["Content-type"] = "application/json"
-axios.defaults.baseURL='api/'
+// axios.defaults.baseURL='http://test.smartyg.com:8888/'
+axios.defaults.baseURL='/api/'
 Vue.prototype.$axios=axios
 Vue.config.productionTip = false
 Vue.use(vueAxios,axios)

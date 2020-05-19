@@ -90,6 +90,7 @@
 <style scoped>
 .imagenet_box{
   margin-top: 100px;
+  margin-bottom: 250px;
 }
 
 </style>

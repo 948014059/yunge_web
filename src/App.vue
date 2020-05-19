@@ -24,8 +24,12 @@
     <div class="container" style="margin-top: 30px">
         <router-view/>
     </div>
-
-    <modalpage></modalpage>
+    <div class="ec_bottom">
+      <dic class="tag">
+       © POWER BY YunGe
+      </dic>
+    </div>
+<!--    <modalpage></modalpage>-->
   </div>
 </template>ubuntu
 <script>
@@ -68,7 +72,17 @@ export default {
     height: 50px;
     z-index: 99;
   }
+  .ec_bottom{
+    width: 100%;
+    height: 50px;
+    background: #343a40;
 
+    bottom: 0;
+  }
+  .tag{
+    color: white;
+    line-height: 50px;
 
+  }
 
 </style>

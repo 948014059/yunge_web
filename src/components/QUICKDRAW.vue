@@ -225,6 +225,7 @@
 <style scoped>
 .quickdraw_box{
   margin-top: 100px;
+  margin-bottom: 280px;
 }
   .strat_game{
     z-index: 99;
