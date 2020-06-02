@@ -21,7 +21,7 @@
               请在<strong>{{times.t}}</strong>秒内画出<strong>{{draw_lists[draw_index]}}</strong>
             </div>
 <!--            画板区域-->
-            <div>
+            <div class="col">
               <plant :weight="weight" :height="height"
                 @change_img="change($event)"
                 ref="clear"></plant>
@@ -138,6 +138,7 @@
       //获得组件宽度
       getcolweight(){
         const weight=document.querySelector('#row').offsetWidth
+        // this.weight=weight
         // console.log(weight)
         return weight
       },

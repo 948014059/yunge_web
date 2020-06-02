@@ -149,7 +149,7 @@
   /*height: 280px;*/
   background: #000000;
   margin: 0;
-  padding: ;
+  padding: 0 ;
   /*margin: 0 auto;*/
 }
 </style>

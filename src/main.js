@@ -11,7 +11,7 @@ import VueFusionCharts from 'vue-fusioncharts';
 import FusionCharts from 'fusioncharts';
 import Column2D from 'fusioncharts/fusioncharts.charts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
-
+import  apiconfig from '../config/api.config'
 Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme);
 
 
@@ -22,11 +22,12 @@ Viewer.setDefaults({
   Options: { 'inline': true, 'button': true, 'navbar': true, 'title': true, 'toolbar': true, 'tooltip': true, 'movable': true, 'zoomable': true, 'rotatable': true, 'scalable': true, 'transition': true, 'fullscreen': true, 'keyboard': true, 'url': 'data-source' }
 })
 
+Vue.prototype.$axios=axios
 //网络请求
 axios.defaults.headers.post["Content-type"] = "application/json"
-// axios.defaults.baseURL='http://test.smartyg.com:8888/'
-axios.defaults.baseURL='/api/'
-Vue.prototype.$axios=axios
+axios.defaults.baseURL=apiconfig.baseUrl
+// axios.defaults.baseURL='/api/'
+
 Vue.config.productionTip = false
 Vue.use(vueAxios,axios)
 

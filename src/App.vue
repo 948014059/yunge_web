@@ -29,7 +29,7 @@
        © POWER BY YunGe
       </dic>
     </div>
-<!--    <modalpage></modalpage>-->
+    <modalpage></modalpage>
   </div>
 </template>ubuntu
 <script>
@@ -76,13 +76,11 @@ export default {
     width: 100%;
     height: 50px;
     background: #343a40;
-
     bottom: 0;
   }
   .tag{
     color: white;
     line-height: 50px;
-
   }
 
 </style>

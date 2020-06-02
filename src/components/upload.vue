@@ -77,6 +77,7 @@
         this.upload_show=true
         let json_data={'base64':this.image_base64}
         this.$axios({method:'post',
+        headers:{ "Content-Type": "application/json;charset=utf-8" },
         url: this.url,
         data:json_data,
         onUploadProgress:function (e) {
