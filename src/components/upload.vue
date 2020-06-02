@@ -60,19 +60,48 @@
         return url
       },
       image_to_base64(file){
+        let self =this
         var reader= new FileReader()
         reader.readAsDataURL(file)
         reader.onload=()=>{
-          // console.log(reader.result)
-          this.image_base64=reader.result
-          // console.log(this.image_base64)
-          this.post_image(reader.result)
+          let result=reader.result
+          let img=new Image()
+          img.src=result
+          console.log(result.length/1024/1024)
+          if (result.length/1024/1024>1){
+            img.onload=function () {
+              self.compress(img,0.6)
+              self.post_image()
+            }
+          }else {
+            this.image_base64=result
+            self.post_image()
+          }
         }
         reader.onerror=function (error) {
           console.log('error')
         }
       },
+      compress(img, size) {
+            let canvas = document.createElement('canvas')
+            let ctx = canvas.getContext('2d')
+            let initSize = img.src.length
+            let width = img.width
+            let height = img.height
+            canvas.width = width
+            canvas.height = height
+            // 铺底色
+            ctx.fillStyle = '#fff'
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+            ctx.drawImage(img, 0, 0, width, height)
+            //进行最小压缩
+            let ndata = canvas.toDataURL('image/jpeg', size)
+            console.log('*******压缩后的图片大小*******')
+            console.log(ndata.length / 1024/1024)
+            this.image_base64=ndata
+        },
       post_image(){
+        // console.log(this.image_base64)
         let  that=this
         this.upload_show=true
         let json_data={'base64':this.image_base64}
