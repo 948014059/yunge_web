@@ -335,6 +335,7 @@
     /*background: #2196f3;*/
     line-height: 50px;
     text-align: center;
+    z-index: 99;
   }
   .plant_right{
     width: 100%;

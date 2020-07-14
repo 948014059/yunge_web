@@ -29,6 +29,7 @@
                 </div>
 
                 <button type="button" class="btn btn-success"
+                        @click="gotolink"
                         data-dismiss="modal" >确定</button>
               </div>
 
@@ -45,7 +46,12 @@
 
       }
     },
-    methods:{}
+    methods:{
+      gotolink(){
+        // this.$router.replace('http://www.baidu.com')
+        window.open('http://aistudio.smartyg.com:4000')
+      }
+    }
   }
 </script>
 

@@ -14,9 +14,9 @@
             <li class="nav-item">
               <router-link to="/" class="navbar-brand" href="#">体验中心</router-link>
             </li>
-<!--            <li class="nav-item">-->
-<!--              <a class="nav-link" href="#" data-target="#myModal" data-toggle="modal">云歌人工智能训练平台</a>-->
-<!--            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="http://192.168.3.203:15000" data-target="#myModal" data-toggle="modal">云歌人工智能训练平台</a>
+            </li>
           </ul>
         </div>
       </nav>

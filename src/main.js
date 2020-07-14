@@ -7,13 +7,12 @@ import axios from  'axios'
 import vueAxios from 'vue-axios'
 import Viewer from 'v-viewer'
 import 'viewerjs/dist/viewer.css'
-import VueFusionCharts from 'vue-fusioncharts';
-import FusionCharts from 'fusioncharts';
-import Column2D from 'fusioncharts/fusioncharts.charts';
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import VueFusionCharts from 'vue-fusioncharts'
+import FusionCharts from 'fusioncharts'
+import Column2D from 'fusioncharts/fusioncharts.charts'
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion'
 import  apiconfig from '../config/api.config'
-Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme);
-
+Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme)
 
 
 //图片放大
@@ -30,7 +29,6 @@ axios.defaults.baseURL=apiconfig.baseUrl
 
 Vue.config.productionTip = false
 Vue.use(vueAxios,axios)
-
 
 /* eslint-disable no-new */
 new Vue({

@@ -11,6 +11,7 @@ const routerOptions = [
   { path:'/quick_draw',component:'QUICKDRAW'},
   { path:'/catVsdog', component:'CatVsDog'},
   { path:'/Poetry_gan',component:'PoetryGan'},
+  { path:'/Gossip',component:'Gossip'},
 ]
 
 

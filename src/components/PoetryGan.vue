@@ -21,6 +21,7 @@
                   </div>
                 </div>
                 <input type="text" class="form-control"
+                       style="outline-style: none"
                        v-model="text"
                        :placeholder="placeholder"
                        aria-label="Text input with segmented dropdown button">
