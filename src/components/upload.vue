@@ -100,6 +100,7 @@
             console.log(ndata.length / 1024/1024)
             this.image_base64=ndata
         },
+
       post_image(){
         // console.log(this.image_base64)
         let  that=this

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="gossip">
-      <change afterPath="$PROJECT_DIR$/src/assets/green_point.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/person_icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/red_point.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/gossip_msg.vue" afterDir="false" />
+    <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CatVsDog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CatVsDog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Gossip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gossip.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gossip_msg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gossip_msg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/upload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upload.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,7 @@
       <workItem from="1591347583985" duration="1490000" />
       <workItem from="1592903252686" duration="1810000" />
       <workItem from="1594091264484" duration="3148000" />
-      <workItem from="1594718805736" duration="33657000" />
+      <workItem from="1594718805736" duration="45707000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -252,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594722770801</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="gossip">
+      <created>1594874118037</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1594874118037</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,17 +277,18 @@
     <MESSAGE value="PoetryGan" />
     <MESSAGE value="add ©" />
     <MESSAGE value="cors" />
-    <option name="LAST_COMMIT_MESSAGE" value="cors" />
+    <MESSAGE value="gossip" />
+    <option name="LAST_COMMIT_MESSAGE" value="gossip" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1591347840324">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1591347840324" />
-    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1594722813313">
+    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1594874116669">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1594722813313" />
+    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1594874116669" />
     <state x="569" y="210" key="FileChooserDialogImpl" timestamp="1591348894598">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -288,10 +297,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="291" y="112" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594722868238" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1594722877543">
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1594874131844">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1594722877543" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1594874131844" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

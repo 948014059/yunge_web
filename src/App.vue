@@ -38,7 +38,24 @@ export default {
     components:{
       modalpage:modal
     },
-    name: 'App'
+    name: 'App',
+    methods:{
+      isPc(){
+        const  userAgentInfo=navigator.userAgent
+        const Agents=['Android','iPhone','SymbianOS','Windows Phone','iPad','iPod']
+        let flag=true
+        for (let v=0;v<Agents.length;v++){
+          if (userAgentInfo.indexOf(Agents[v])>0){
+            flag=false
+            break
+          }
+        }
+        return flag
+      },
+    },
+  created () {
+      this.$store.commit('isPC',this.isPC())
+  }
 }
 </script>
 

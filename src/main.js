@@ -12,9 +12,18 @@ import FusionCharts from 'fusioncharts'
 import Column2D from 'fusioncharts/fusioncharts.charts'
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion'
 import  apiconfig from '../config/api.config'
+import Vuex from 'vuex'
+
+
+//条形图
 Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme)
 
-
+Vue.use(Vuex)
+const store =new Vuex.Store({
+  state:{
+    isPc:false
+  }
+})
 //图片放大
 Vue.use(Viewer)
 Viewer.setDefaults({
@@ -34,6 +43,7 @@ Vue.use(vueAxios,axios)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

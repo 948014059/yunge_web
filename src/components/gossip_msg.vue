@@ -1,20 +1,30 @@
 <template>
     <div class="msg_box" :style="'height:'+height+'px'">
-      <div class="ai_box" v-if="msg_obj.ai">
+      <div class="ai_box"
+           v-if="msg_obj.ai">
         <div class="ai_icon">
           <img src="../assets/dog-3431913.jpg" alt="">
         </div>
         <div class="ai_msg">
-          {{msg_obj.msg}}
+          <span>{{msg_obj.msg}}</span>
+          <div class="img_box" v-if="msg_obj.img">
+            <img :src="msg_obj.img" alt="" >
+          </div>
+
         </div>
       </div>
 
-      <div class="mine_box" v-if="!msg_obj.ai">
+      <div class="mine_box"
+
+           v-if="!msg_obj.ai">
         <div class="mine_icon">
           <img src="../assets/person_icon.jpg" alt="">
         </div>
         <div class="mine_msg" >
-          {{msg_obj.msg}}
+          <span>{{msg_obj.msg}}</span>
+          <div class="img_box" v-if="msg_obj.img">
+            <img :src="msg_obj.img" alt="" >
+          </div>
         </div>
       </div>
 
@@ -37,7 +47,7 @@
         var len=0
         for (var i=0;i<str.length;i++){
           var c = str.charCodeAt(i)
-          if ((c >= 0x0001 && c <= 0x007e) || (0xff60<=c && c<=0xff9f)){
+          if (c >= 0 && c <= 128){
           len++
           }
           else {
@@ -49,9 +59,23 @@
 
     },
     mounted () {
-      let cont_len = this.cont_len(this.msg_obj.msg)
-      let  div_height=(parseInt(cont_len/24)+1)*20
-      this.height=div_height
+      if (this.msg_obj.img){
+        this.height=150
+      }else {
+        let cont_len = this.cont_len(this.msg_obj.msg)
+        console.log(cont_len)
+        let line_height_=Math.ceil(cont_len/25)
+        console.log(line_height_)
+        let  div_height
+        if (line_height_==1){
+          div_height=0
+        }
+        else{
+          div_height=Math.ceil(cont_len/25)*25+25
+        }
+        this.height=div_height
+      }
+
     },
 
   }
@@ -60,7 +84,7 @@
 <style scoped>
   .msg_box{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     /*height: 100%;*/
     position: relative;
     /*display:table*/
@@ -76,6 +100,7 @@
   }
   .mine_box{
     width: 360px;
+    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
@@ -116,31 +141,39 @@
     /*为了给after伪元素自动继承*/
     color: #fff;
     font-size: 20px;
-    line-height: 18px;
+    line-height: 25px;
     padding: 5px 12px 5px 12px;
     box-sizing: border-box;
     border-radius: 6px;
     word-break: break-all;
 
   }
+  .img_box{
+    width: 200px;
+    height: 130px;
+    overflow: hidden;
+  }
+  .img_box img {
+    width: 100%;
+  }
 
-.ai_msg::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: -5px;
-    width: 10px;
-    height: 10px;
-    margin-top: -10px;
-    background: inherit;
-    transform: rotate(45deg);
-}
+  .ai_msg::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: -5px;
+      width: 10px;
+      height: 10px;
+      margin-top: -10px;
+      background: inherit;
+      transform: rotate(45deg);
+  }
 
   .mine_msg{
     position: absolute;
     top: 15px;
-    right: 5px;
-    margin-right: 65px;
+    right: 65px;
+    /*margin-right: 6px;*/
     max-width: 300px;
     min-height: 20px;
     background-color: #9eea6a;
@@ -148,13 +181,12 @@
     /*为了给after伪元素自动继承*/
     color: #fff;
     font-size: 20px;
-    line-height: 18px;
+    line-height: 25px;
     padding: 5px 12px 5px 12px;
     box-sizing: border-box;
     border-radius: 6px;
     word-break: break-all;
   }
-
   .mine_msg::before {
     content: '';
     position: absolute;
