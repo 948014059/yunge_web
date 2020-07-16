@@ -63,9 +63,9 @@
         this.height=150
       }else {
         let cont_len = this.cont_len(this.msg_obj.msg)
-        console.log(cont_len)
+        // console.log(cont_len)
         let line_height_=Math.ceil(cont_len/25)
-        console.log(line_height_)
+        // console.log(line_height_)
         let  div_height
         if (line_height_==1){
           div_height=0

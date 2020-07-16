@@ -78,8 +78,28 @@
         </div>
       </div>
 <!--      移动端显示-->
-      <div class="mobile" v-if="! $store.state.isPc">
-        55
+      <div class="mobile" v-if="!$store.state.isPc">
+        <div class="show_" id="show_">
+              <viewer :images="chat_contents">
+                <transition-group>
+                <div class="chat_content"
+                     v-for="(item,index) of chat_contents" :key="index">
+                  <gossip_msg :msg_obj="item"></gossip_msg>
+<!--                  {{item}}-->
+                </div>
+                </transition-group>
+              </viewer>
+
+
+            </div>
+        <div class="mobile_bottom">
+          <div class="mobile_test_input">
+            <input type="text" v-model="textarea" @keydown="listen($event)">
+          </div>
+          <div class="mobile_button_send" @click="send">
+            发送
+          </div>
+        </div>
       </div>
 
       <input type="file" name="image" id='file' class="image_file"
@@ -115,7 +135,15 @@
           {ai_name:'小云',state:true,ai_img:require('../assets/dog-3431913.jpg'),messages:'dadadada',bg:true},
           {ai_name:'小歌',state:false,ai_img:require('../assets/cat.png'),messages:'hahahah',bg:false},
         ],
-        chat_contents:[],
+        chat_contents:[
+          // {msg:'msg',ai:false,img:''},
+          // {msg:'msg',ai:true,img:''},
+          // {msg:'msg',ai:false,img:''},
+          // {msg:'msg',ai:false,img:''},
+          // {msg:'msg',ai:false,img:''},
+          // {msg:'msg',ai:false,img:''},
+
+        ],
         textarea:'',
         image_base64:'',
       }
@@ -285,9 +313,44 @@
   .mobile{
     margin: 0;
     width: 100%;
-    height: 500px;
-    background-color: #2196f3;
+    height: 600px;
+    margin-top: -55px;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: -55px;
   }
+  .mobile_bottom{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    text-align: left;
+    /*background-color: #2196f3;*/
+  }
+  .mobile_test_input{
+    flex: 8;
+  }
+  .mobile_test_input input{
+    margin: 8px;
+    border: none;
+    width: 100%;
+    height: 34px;
+    /*margin-top: 10px;/*/
+    outline-style: none;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+  }
+  .mobile_button_send{
+    flex: 2;
+    background-color: #9eea6a;
+    margin: 8px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+  }
+
   .alert{
     position: fixed;
     width: 40%;
@@ -406,6 +469,7 @@
     line-height: 20px;
     color: #f8f8f6;
   }
+
   .gossip_right{
     flex: 7;
     max-width: 600px;
@@ -434,7 +498,7 @@
 
   .send_message{
     width: 100%;
-    height: 200px;
+    height: 100px;
     background-color: white;
     position: absolute;
     bottom: 0;
@@ -460,14 +524,14 @@
 
   .show_{
     width: 100%;
-    height: 450px;
+    height: 550px;
     overflow-y: scroll;
     /*overflow-x: auto;*/
     /*background-color: #2196f3;*/
   }
   .message{
     width: 100%;
-    height: 170px;
+    height: 70px;
     border: none;
     outline-style: none;
     font-size: 20px;
