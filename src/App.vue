@@ -25,9 +25,9 @@
         <router-view/>
     </div>
     <div class="ec_bottom">
-      <dic class="tag">
+      <div class="tag">
        © POWER BY YunGe
-      </dic>
+      </div>
     </div>
     <modalpage></modalpage>
   </div>
