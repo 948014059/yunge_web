@@ -21,7 +21,7 @@ Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme)
 Vue.use(Vuex)
 const store =new Vuex.Store({
   state:{
-    isPc:false
+    isPc:true
   }
 })
 //图片放大

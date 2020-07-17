@@ -46,12 +46,13 @@ export default {
         const Agents=['Android','iPhone','SymbianOS','Windows Phone','iPad','iPod']
         let flag=true
         for (let v=0;v<Agents.length;v++){
-          if (userAgentInfo.indexOf(Agents[v])>0){
+          let name=new RegExp(Agents[v]);
+          if (name.test(userAgentInfo)){
             this.$store.state.isPc=false
             break
           }
         }
-        this.$store.state.isPc=true
+        // this.$store.state.isPc=true
   }
 }
 </script>

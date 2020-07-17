@@ -142,7 +142,6 @@
           // {msg:'msg',ai:false,img:''},
           // {msg:'msg',ai:false,img:''},
           // {msg:'msg',ai:false,img:''},
-
         ],
         textarea:'',
         image_base64:'',
@@ -313,7 +312,7 @@
   .mobile{
     margin: 0;
     width: 100%;
-    height: 600px;
+    /*height: 600px;*/
     margin-top: -55px;
     background: white;
     border-radius: 20px;
@@ -526,6 +525,7 @@
     width: 100%;
     height: 550px;
     overflow-y: scroll;
+    overflow-x: hidden;
     /*overflow-x: auto;*/
     /*background-color: #2196f3;*/
   }

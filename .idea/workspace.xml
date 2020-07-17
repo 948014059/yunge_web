@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Gossip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gossip.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gossip_msg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gossip_msg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +122,7 @@
       <workItem from="1591347583985" duration="1490000" />
       <workItem from="1592903252686" duration="1810000" />
       <workItem from="1594091264484" duration="3148000" />
-      <workItem from="1594718805736" duration="50028000" />
+      <workItem from="1594718805736" duration="54555000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -264,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594891141633</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add mobile_gossip">
+      <created>1594895389280</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1594895389280</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,17 +290,18 @@
     <MESSAGE value="cors" />
     <MESSAGE value="gossip" />
     <MESSAGE value="add vuex" />
-    <option name="LAST_COMMIT_MESSAGE" value="add vuex" />
+    <MESSAGE value="add mobile_gossip" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mobile_gossip" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1591347840324">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1591347840324" />
-    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1594891140390">
+    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1594895388269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1594891140390" />
+    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1594895388269" />
     <state x="569" y="210" key="FileChooserDialogImpl" timestamp="1591348894598">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -302,10 +310,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="291" y="112" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594722868238" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1594891149906">
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1594895393403">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1594891149906" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1594895393403" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

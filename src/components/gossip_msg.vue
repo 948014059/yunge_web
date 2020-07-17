@@ -64,14 +64,14 @@
       }else {
         let cont_len = this.cont_len(this.msg_obj.msg)
         // console.log(cont_len)
-        let line_height_=Math.ceil(cont_len/25)
+        let line_height_=Math.ceil(cont_len/22)
         // console.log(line_height_)
         let  div_height
         if (line_height_==1){
           div_height=0
         }
         else{
-          div_height=Math.ceil(cont_len/25)*25+25
+          div_height=line_height_*25+25
         }
         this.height=div_height
       }
@@ -134,7 +134,7 @@
     position: absolute;
     top: 15px;
     left: 65px;
-    max-width: 300px;
+    max-width: 245px;
     min-height: 20px;
     background-color: skyblue;
     border-bottom-color: skyblue;
@@ -142,7 +142,7 @@
     color: #fff;
     font-size: 20px;
     line-height: 25px;
-    padding: 5px 12px 5px 12px;
+    padding: 5px;
     box-sizing: border-box;
     border-radius: 6px;
     word-break: break-all;
@@ -160,6 +160,7 @@
   .ai_msg::before {
       content: '';
       position: absolute;
+
       top: 15px;
       left: -5px;
       width: 10px;
@@ -174,7 +175,7 @@
     top: 15px;
     right: 65px;
     /*margin-right: 6px;*/
-    max-width: 300px;
+    max-width: 245px;
     min-height: 20px;
     background-color: #9eea6a;
     border-bottom-color: #9eea6a;
@@ -182,7 +183,7 @@
     color: #fff;
     font-size: 20px;
     line-height: 25px;
-    padding: 5px 12px 5px 12px;
+    padding: 5px;
     box-sizing: border-box;
     border-radius: 6px;
     word-break: break-all;
