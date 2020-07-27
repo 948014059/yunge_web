@@ -79,7 +79,7 @@
       post_data(){
         this.upload_show=true
         var  json_data={'choose':this.choose,
-        'text':this.text}
+        'text':this.text,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
         this.$axios({method:'post',
         url: this.url,
         data:json_data,

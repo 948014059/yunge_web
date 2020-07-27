@@ -24,6 +24,7 @@ const store =new Vuex.Store({
     isPc:true
   }
 })
+
 //图片放大
 Vue.use(Viewer)
 Viewer.setDefaults({

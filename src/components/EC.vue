@@ -52,11 +52,11 @@
    title:'为你写诗',
    words:''
    },
-          {bgurl:'',
-   link_:'/Gossip',
-   title:'闲聊机器人',
-   words:''
-   }
+   //        {bgurl:'',
+   // link_:'/Gossip',
+   // title:'闲聊机器人',
+   // words:''
+   // }
    ]
 
       }

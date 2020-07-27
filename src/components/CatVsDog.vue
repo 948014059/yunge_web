@@ -149,7 +149,7 @@
         post_image(){
         let  that=this
         this.upload_show=true
-        let json_data={'base64':this.image_base64}
+        let json_data={'base64':this.image_base64,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
         this.$axios({method:'post',
         url: this.url,
         data:json_data,
@@ -170,7 +170,7 @@
           this.$set(this.par,'cat_par',res.data.cat_par)
           this.$set(this.par,'dog_par',res.data.dog_par)
 
-          if (this.isPc()){
+          if (this.$store.state.isPc){
             document.querySelector('.bar_1').style.width=res.data.dog_par+'%'
           document.querySelector('.bar_2').style.width=res.data.cat_par+'%'
           }

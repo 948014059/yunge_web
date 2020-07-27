@@ -148,6 +148,7 @@
       }
     },
     methods:{
+      //
       get_state(state){
         if (state){
           return require('../assets/green_point.png')

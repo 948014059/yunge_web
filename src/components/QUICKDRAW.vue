@@ -121,7 +121,7 @@
         //上传图片
         change(data){
         this.context=data
-        let  data_={'base64':data}
+        let  data_={'base64':data,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
         this.$axios({method:'post',
         url: this.url,
         data:data_}).then(res=>{
