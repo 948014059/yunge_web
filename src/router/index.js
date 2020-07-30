@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 const routerOptions = [
   // { path: '/', component: 'Home' },
-  { path: '/', component: 'EC' },
+  { path: '/', component: 'EC'},
   { path: '*', component: 'NotFound' },
   { path:'/mnist',component:'MNIST'},
   { path:'/yolov3',component:'YOLO3'},
@@ -16,13 +17,21 @@ const routerOptions = [
 
 
 const routes = routerOptions.map(route => {
-  console.log(route.component)
+  // console.log(route.component)
   return {
     ...route,
     component: () => import(`@/components/${route.component}.vue`),
-
   }
 })
+
+// routerOptions.beforeEach((to, from, next) => {
+//     const role = localStorage.getItem('ms_username');
+//     if(!role && to.path !== '/login') {
+//
+//     }
+// })
+
+
 
 Vue.use(Router)
 

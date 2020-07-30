@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        target:'https://test.smartyg.com/api/',
+        target:'https://testapi.smartyg.com/',
         changeOrigin:true,
         pathRewrite:{
           '^/apis':'/api'
@@ -64,7 +64,7 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

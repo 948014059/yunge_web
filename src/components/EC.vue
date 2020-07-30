@@ -1,6 +1,5 @@
 <template>
   <div class="try">
-
     <div class="row" >
     <div class="col-md-4 " v-for="i in eclist">
           <div class="card mb-4 shadow-sm">

@@ -106,7 +106,7 @@
         let  that=this
         this.upload_show=true
         let json_data={'base64':this.image_base64,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
-        console.log(json_data)
+        // console.log(json_data)
         this.$axios({method:'post',
         headers:{ "Content-Type": "application/json;charset=utf-8" },
         url: this.url,

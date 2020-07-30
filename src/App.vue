@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="top-nav" >
+    <div class="top-nav" v-if="this.$store.state.isPc">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 <!--        <router-link to="/" class="navbar-brand" href="#">首页</router-link>-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -14,19 +14,33 @@
             <li class="nav-item">
               <router-link to="/" class="navbar-brand" href="#">体验中心</router-link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://192.168.3.203:15000" data-target="#myModal" data-toggle="modal">云歌人工智能训练平台</a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="http://192.168.3.203:15000" data-target="#myModal" data-toggle="modal">云歌人工智能训练平台</a>-->
+<!--            </li>-->
           </ul>
         </div>
       </nav>
     </div>
-    <div class="container" style="margin-top: 30px">
+
+    <div class="moblie_nav" v-if="!this.$store.state.isPc">
+       <div style="width: 100%;height: 150px" v-if="this.$store.state.mobile_title"></div>
+      <div class="main_nav" v-if="this.$store.state.mobile_title">
+        <img src="./assets/mobile_top.jpg" alt="">
+      </div>
+
+      <div class="re" v-if="!this.$store.state.mobile_title" @click="back_">
+        <div class="re_img" >
+          <img src="./assets/return.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="" ref="main">
         <router-view/>
     </div>
     <div class="ec_bottom">
       <div class="tag">
-       © POWER BY YunGe
+       © Power By YunGe
       </div>
     </div>
     <modalpage></modalpage>
@@ -40,6 +54,9 @@ export default {
     },
     name: 'App',
     methods:{
+      back_(){
+        this.$router.go(-1);
+      }
     },
   mounted () {
       const  userAgentInfo=navigator.userAgent
@@ -53,6 +70,18 @@ export default {
           }
         }
         // this.$store.state.isPc=true
+  },
+  watch:{
+      $route(to,from){
+        // console.log(to)
+        if (to.fullPath == '/'){
+          this.$store.state.mobile_title=true
+        }
+        else {
+          this.$store.state.mobile_title=false
+        }
+        window.scrollTo(0,0)
+    }
   }
 }
 </script>
@@ -66,11 +95,7 @@ export default {
     color: #2c3e50;
     margin-top: 0px;
   }
-  .topimg{
-    background: url("./assets/topimage1.jpg") no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-  }
+
   /*.navbar{*/
     /*background-color: greenyellow;*/
   /*}*/
@@ -96,6 +121,44 @@ export default {
   .tag{
     color: white;
     line-height: 50px;
+  }
+  .moblie_nav{
+    width: 100%;
+    /*height: 150px;*/
+  }
+
+  .main_nav{
+    width: 100%;
+    height: 300px;
+    background-color: rgba(158, 234, 106, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*z-index: ;*/
+  }
+  .main_nav img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .re{
+    width: 100%;
+    height: 50px;
+    background-color: #343a40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  .re_img{
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  .re_img img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
   }
 
 </style>

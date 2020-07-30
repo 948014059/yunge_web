@@ -194,7 +194,6 @@
       },
       mounted () {
           this.pc_show=this.$store.state.isPc
-
       }
     }
 </script>
