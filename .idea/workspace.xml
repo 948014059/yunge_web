@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/mobile_top.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/return.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/mobile_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/webpack.dev.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/api.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CatVsDog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CatVsDog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/upload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mobile_top.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="D:/django_vue/yunge_web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -136,7 +128,8 @@
       <workItem from="1595833552371" duration="4862000" />
       <workItem from="1595929512951" duration="972000" />
       <workItem from="1596002489098" duration="1314000" />
-      <workItem from="1596080562199" duration="11085000" />
+      <workItem from="1596080562199" duration="11737000" />
+      <workItem from="1596184493585" duration="7005000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -299,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595834060079</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="change mobile ui">
+      <created>1596105350186</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1596105350186</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,29 +320,34 @@
     <MESSAGE value="add vuex" />
     <MESSAGE value="add mobile_gossip" />
     <MESSAGE value="change api" />
-    <option name="LAST_COMMIT_MESSAGE" value="change api" />
+    <MESSAGE value="change mobile ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="change mobile ui" />
   </component>
   <component name="WindowStateProjectService">
     <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1591347840324">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1591347840324" />
-    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1595834057547">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596188248026">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1595834057547" />
-    <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1596102498893">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1596188248026" />
+    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1596105348320">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1596102498893" />
-    <state x="291" y="112" key="SettingsEditor" timestamp="1594722868238">
+    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1596105348320" />
+    <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1596190598204">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="291" y="112" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594722868238" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1595834067702">
+    <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1596190598204" />
+    <state x="291" y="112" key="SettingsEditor" timestamp="1596105390302">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1595834067702" />
+    <state x="291" y="112" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1596105390302" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1596105382886">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1596105382886" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -364,7 +369,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/QUICKDRAW.vue</url>
-          <line>82</line>
+          <line>83</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>

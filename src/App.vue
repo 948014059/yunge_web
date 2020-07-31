@@ -25,11 +25,11 @@
     <div class="moblie_nav" v-if="!this.$store.state.isPc">
        <div style="width: 100%;height: 150px" v-if="this.$store.state.mobile_title"></div>
       <div class="main_nav" v-if="this.$store.state.mobile_title">
-        <img src="./assets/mobile_top.jpg" alt="">
+        <img src="./assets/mobile_top.png" alt="">
       </div>
 
       <div class="re" v-if="!this.$store.state.mobile_title" @click="back_">
-        <div class="re_img" >
+        <div class="re_img">
           <img src="./assets/return.png" alt="">
         </div>
       </div>
@@ -125,17 +125,20 @@ export default {
   .moblie_nav{
     width: 100%;
     /*height: 150px;*/
+    /*position: absolute;*/
   }
 
   .main_nav{
     width: 100%;
-    height: 300px;
-    background-color: rgba(158, 234, 106, 0.8);
+    height: 280px;
+    /*background-color: rgba(158, 234, 106, 0.8);*/
     position: fixed;
     top: 0;
     left: 0;
+    position: absolute;
     /*z-index: ;*/
   }
+
   .main_nav img{
     width: 100%;
     height: 100%;
@@ -150,15 +153,19 @@ export default {
     left: 0;
     z-index: 99;
   }
+
   .re_img{
     width: 50px;
     height: 50px;
     float: left;
   }
+
   .re_img img{
     width: 100%;
     height: 100%;
     padding: 10px;
   }
+
+
 
 </style>

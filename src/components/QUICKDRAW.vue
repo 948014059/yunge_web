@@ -18,7 +18,7 @@
           <div class="row" id="row">
 <!--            顶部提提示区域-->
             <div class="draw_top">
-              请在<strong>{{times.t}}</strong>秒内画出<strong>{{draw_lists[draw_index]}}</strong>
+              请在<strong>{{times.t}}</strong>秒内画出<strong>{{draw_lists[draw_index]}}</strong>,您还有<strong>{{times.line}}</strong>次机会
             </div>
 <!--            画板区域-->
             <div class="col">
@@ -71,7 +71,8 @@
             <div class="modal-footer">
 <!--              <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>-->
               <button type="button" class="btn btn-primary" @click="next_one" v-show="ai_succ">下一关</button>
-              <button type="button" class="btn btn-primary" @click="restart" v-show="!ai_succ">重新开始</button>
+              <button type="button" class="btn btn-primary" @click="restart(true)" v-show="!ai_succ">重新开始</button>
+              <button type="button" class="btn btn-primary" @click="save_l(true)" v-show="save_l">-1</button>
             </div>
           </div>
         </div>
@@ -99,9 +100,10 @@
         url:'/post_quickDraw',
         argmaxp:'香蕉',
         labels:'',
+        save_l:'',
         res:'',
         imgurl:'',
-        times:{'t':20},
+        times:{'t':5,'line':3},
         intervalId :null,
         draw_index:0,
         argmaxshow:false,
@@ -152,10 +154,20 @@
               case this.times.t==0:
                 // console.log('qucik')
                 const total=document.querySelector('#btn_total').click()
-                this.message1='Fail!'
-                this.message2='AI 并不能辨别出您的灵魂画作!'
-                this.ai_succ=false
-                this.stop()
+                if (this.times.line>0){
+                  this.times.line-=1
+                  this.message1='Fail!'
+                  this.message2='AI 并不能辨别出您的灵魂画作! 您还有'+this.times.line+'次机会'
+                  this.times.t=20
+                  this.save_l=true
+                  // this.restart(false)
+                }
+                if (this.times.line==0){
+                  this.message1='Fail!'
+                  this.message2='AI 并不能辨别出您的灵魂画作! 您已经失去了所有机会'
+                  this.ai_succ=false
+                  this.stop()
+                }
                 break;
             }
           },1000)
@@ -175,13 +187,27 @@
           this.clearcanvas()
       },
       //重新开始
-      restart(){
-          const total=document.querySelector('#btn_total').click()
+      restart(end){
           this.draw_index=0
-          this.times.t=20
-          this.clearcanvas()
+          this.times.line=3
           this.startgameshow=true
+          const total=document.querySelector('#btn_total').click()
+          // this.draw_index=0
+          this.times.t=20
+          // this.times.line=3
+          this.clearcanvas()
       },
+      //-1
+      save_l(){
+          this.draw_index=0
+          // this.times.line=3
+          this.startgameshow=true
+          const total=document.querySelector('#btn_total').click()
+          // this.draw_index=0
+          this.times.t=20
+          // this.times.line=3
+          this.clearcanvas()
+      }
 
     },
     mounted () {
