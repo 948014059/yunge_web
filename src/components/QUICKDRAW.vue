@@ -181,8 +181,12 @@
               case this.times.t==0:
                 this.stop()    //时间为0 时停止计时器
                 // navigator.vibrate(1000);
+                try {
+                  window.navigator.vibrate(1000)
+                }catch (e) {
+                  console.log(e)
+                }
 
-                // window.navigator.vibrate(1000)
                 if (this.times.line>0){  //当生命 > 0时-1 然后重启计时器
                   this.life_1()
                   this.times.line-=1
@@ -388,6 +392,7 @@
     line-height: 50px;
     text-align: center;
     z-index: 99;
+    transition: all .5s ease;
   }
 
   .plant_right{
