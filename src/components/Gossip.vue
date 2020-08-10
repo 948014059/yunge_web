@@ -178,8 +178,8 @@
       send(){
         // console.log(this.textarea)
         this.add_contents(this.textarea,false,'')
-        let ai_res=this.ai_return(this.textarea)
-        this.add_contents(ai_res,true,'')
+        this.ai_return(this.textarea)
+        // this.add_contents(ai_res,true,'')
         this.textarea=''
       },
       scrolltoBottom(){
@@ -196,10 +196,21 @@
         }
       },
       ai_return(str){
-          str=str.replace('？','!')
-          str=str.replace("吗","")
+          let json_data={'question':str,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
+          this.$axios({method:'post',
+          headers:{ "Content-Type": "application/json;charset=utf-8" },
+          url: 'api/post_gossip',
+          data:json_data,
+          }).then(res=>{
+            if (res.data.flag=='error'){
+              this.add_contents('错误！',true,'')
+            }else {
+              this.add_contents(res.data.answay,true,'')
+            }
+
+          })
           // str.replace('?','!')
-        return str
+        // return str
 
       },
       upload_yolo(){
@@ -224,7 +235,7 @@
         // let files=document.querySelector('#file').files[0]
         // this.image_to_base64(files)
         let  that=this
-        let json_data={'base64':this.image_base64}
+        let json_data={'base64':this.image_base64,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
         this.add_contents('',false,this.image_base64)
         this.add_contents('请稍等...',true)
         this.$axios({method:'post',

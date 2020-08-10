@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/image_city.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mobile_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mobile_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/topimage1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QUICKDRAW.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/api.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Gossip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gossip.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gossip_msg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gossip_msg.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="D:/django_vue/django_ecapi" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -130,7 +132,9 @@
       <workItem from="1596002489098" duration="1314000" />
       <workItem from="1596080562199" duration="11737000" />
       <workItem from="1596184493585" duration="26785000" />
-      <workItem from="1596678617141" duration="1252000" />
+      <workItem from="1596678617141" duration="1314000" />
+      <workItem from="1596764132148" duration="14272000" />
+      <workItem from="1597039700563" duration="3565000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -314,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596537036238</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="qucik draw update">
+      <created>1596679896628</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1596679896628</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,22 +359,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1596678695739" />
-    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1596537034633">
+    <state x="786" y="123" key="CommitChangelistDialog2" timestamp="1596679894376">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1596537034633" />
-    <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1596594350454">
+    <state x="786" y="123" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1596679894376" />
+    <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1597039827628">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1596594350454" />
+    <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1597039827628" />
     <state x="291" y="112" key="SettingsEditor" timestamp="1596191624215">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="291" y="112" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1596191624215" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1596537042717">
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1596679907225">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1596537042717" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1596679907225" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

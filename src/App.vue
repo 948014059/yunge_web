@@ -39,8 +39,8 @@
         <router-view/>
     </div>
     <div class="ec_bottom">
-      <div class="tag">
-       © Power By YunGe
+      <div class="tag" @click="linktoyg">
+       Copyright © 广州云歌信息科技有限公司
       </div>
     </div>
     <modalpage></modalpage>
@@ -56,8 +56,14 @@ export default {
     methods:{
       back_(){
         this.$router.go(-1);
+      },
+      linktoyg(){
+        // this.$router.go('http://www.smartyg.com/')
+        window.open('http://www.smartyg.com/')
       }
     },
+
+
   mounted () {
       const  userAgentInfo=navigator.userAgent
         const Agents=['Android','iPhone','SymbianOS','Windows Phone','iPad','iPod']
@@ -136,6 +142,7 @@ export default {
     top: 0;
     left: 0;
     position: absolute;
+    z-index: -1;
     /*z-index: ;*/
   }
 

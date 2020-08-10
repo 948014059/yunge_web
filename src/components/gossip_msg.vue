@@ -6,7 +6,7 @@
           <img src="../assets/dog-3431913.jpg" alt="">
         </div>
         <div class="ai_msg">
-          <span>{{msg_obj.msg}}</span>
+          <span v-html="msg_obj.msg"></span>
           <div class="img_box" v-if="msg_obj.img">
             <img :src="msg_obj.img" alt="" >
           </div>
@@ -56,6 +56,7 @@
         }
         return len
       },
+
 
     },
     mounted () {
