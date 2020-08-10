@@ -3,7 +3,7 @@
       <div class="ai_box"
            v-if="msg_obj.ai">
         <div class="ai_icon">
-          <img src="../assets/dog-3431913.jpg" alt="">
+          <img src="../assets/ai_xiaoyun.jpg" alt="">
         </div>
         <div class="ai_msg">
           <span v-html="msg_obj.msg"></span>

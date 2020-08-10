@@ -13,6 +13,7 @@ const routerOptions = [
   { path:'/catVsdog', component:'CatVsDog'},
   { path:'/Poetry_gan',component:'PoetryGan'},
   { path:'/Gossip',component:'Gossip'},
+  {path: '/Translate',component: 'Translate'}
 ]
 
 

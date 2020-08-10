@@ -46,7 +46,6 @@
                 </transition-group>
               </viewer>
 
-
             </div>
 
 
@@ -132,7 +131,7 @@
         ai_talk_with:'小云',
         ai_no_alive:'',
         ai_lists:[
-          {ai_name:'小云',state:true,ai_img:require('../assets/dog-3431913.jpg'),messages:'dadadada',bg:true},
+          {ai_name:'小云',state:true,ai_img:require('../assets/ai_xiaoyun.jpg'),messages:'dadadada',bg:true},
           {ai_name:'小歌',state:false,ai_img:require('../assets/cat.png'),messages:'hahahah',bg:false},
         ],
         chat_contents:[
@@ -204,8 +203,10 @@
           }).then(res=>{
             if (res.data.flag=='error'){
               this.add_contents('错误！',true,'')
+              this.ai_lists[0].messages='错误！'
             }else {
               this.add_contents(res.data.answay,true,'')
+              this.ai_lists[0].messages=res.data.answay
             }
 
           })
@@ -310,6 +311,7 @@
     },
     mounted () {
     // this.scrolltoBottom()
+      this.ai_return('robot')
     },
     watch:{
       chat_contents(new_val){
@@ -479,6 +481,10 @@
     text-align: left;
     line-height: 20px;
     color: #f8f8f6;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp: 3;
+    /*white-space: nowrap;*/
   }
 
   .gossip_right{
