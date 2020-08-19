@@ -92,8 +92,14 @@
 
             </div>
         <div class="mobile_bottom">
+          <div class="asr" @click="asr_text=!asr_text"><img src="../assets/sound_icon.png" alt=""></div>
           <div class="mobile_test_input">
-            <input type="text" v-model="textarea" @keydown="listen($event)">
+            <input type="text" v-model="textarea" @keydown="listen($event)" v-if="asr_text">
+            <input type="text" v-model="textarea" @keydown="listen($event)"
+                   @touchstart="gostart" @touchmove="gomove" @touchend="goend"
+                   placeholder="长按我可进行语音识别哦"
+                   v-if="!asr_text">
+
           </div>
           <div class="mobile_button_send" @click="send">
             发送
@@ -107,6 +113,14 @@
       <input type="file" name="image" id='file1' class="image_file"
           @change="post_face($event)">
 
+      <div class="asr_loading" v-if="hearing">
+        <div class="loading">
+          <div class="load_back" id="load_back"></div>
+          <img src="../assets/sound_icon2.png" alt="">
+          <div>录音中，上划取消</div>
+        </div>
+      </div>
+
       <transition name="alert">
       <div class="alert alert-warning alert-dismissible " role="alert" v-if="alert">
         <button @click="alert=false" type="button" class="close"><span aria-hidden="true">&times;</span></button>
@@ -119,6 +133,13 @@
 
 <script>
   import gossip_msg from './gossip_msg'
+  import Recorder from 'js-audio-recorder';
+  let recorder = new Recorder({
+    sampleBits: 16,                 // 采样位数，支持 8 或 16，默认是16
+    sampleRate: 16000,              // 采样率，支持 11025、16000、22050、24000、44100、48000，根据浏览器默认值，我的chrome是48000
+    numChannels: 1,                 // 声道，支持 1 或 2， 默认是1
+    // compiling: false,(0.x版本中生效,1.x增加中)  // 是否边录边转换，默认是false
+});
   export default {
     components:{
       gossip_msg:gossip_msg
@@ -127,6 +148,7 @@
     data(){
       return{
         url:'',
+        hearing:false,
         alert:false,
         ai_talk_with:'小云',
         ai_no_alive:'',
@@ -134,6 +156,7 @@
           {ai_name:'小云',state:true,ai_img:require('../assets/ai_xiaoyun.jpg'),messages:'dadadada',bg:true},
           {ai_name:'小歌',state:false,ai_img:require('../assets/cat.png'),messages:'hahahah',bg:false},
         ],
+        asr_text:true,
         chat_contents:[
           // {msg:'msg',ai:false,img:''},
           // {msg:'msg',ai:true,img:''},
@@ -144,6 +167,8 @@
         ],
         textarea:'',
         image_base64:'',
+        asr_time:0,
+        asr_timer:null,
       }
     },
     methods:{
@@ -198,7 +223,7 @@
           let json_data={'question':str,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
           this.$axios({method:'post',
           headers:{ "Content-Type": "application/json;charset=utf-8" },
-          url: 'api/post_gossip',
+          url: '/post_gossip',
           data:json_data,
           }).then(res=>{
             if (res.data.flag=='error'){
@@ -307,7 +332,47 @@
         }
         return url
       },
+      gostart(){
+        this.asr_timer=setInterval(()=>{
+          this.asr_time+=1
+        },1000)
+        recorder.start()
 
+      },
+      gomove(){
+        this.stop_interval()
+        recorder.stop()
+        recorder.destroy()
+      },
+      goend(){
+        this.stop_interval()
+        recorder.stop()
+        let pcm=recorder.getPCMBlob()
+        let formdata= new FormData()
+        formdata.append('file',pcm)
+        formdata.append('name','dada')
+          this.$axios({method:'post',
+          url: '/post_sound_btype',
+           cache:false,
+          data:formdata,
+          processData: false,// 告诉axios不要去处理发送的数据(重要参数)
+          contentType: false,
+          }).then(res=>{
+            if (res.data.flag=='error'){
+              this.textarea=res.data.flag
+            }else {
+              this.textarea=res.data.asr_word
+            }
+
+          })
+
+      },
+      stop_interval(){
+        clearInterval(this.asr_timer)
+        this.asr_timer=null
+        this.asr_time=0
+        this.hearing=false
+      }
     },
     mounted () {
     // this.scrolltoBottom()
@@ -316,13 +381,34 @@
     watch:{
       chat_contents(new_val){
         this.scrolltoBottom()
+      },
+      asr_time(new_val){
+          if (new_val>=1){
+            console.log(new_val)
+            this.hearing=true
+            let  load_back=document.getElementById('load_back')
+            load_back.style.height=(new_val-1)*10+'%'
+          }
+          if (new_val==11){
+            // this.stop_interval()
+            this.goend()
+          }
       }
+
     }
 
   }
 </script>
 
 <style scoped>
+  input {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  }
   .mobile{
     margin: 0;
     width: 100%;
@@ -339,11 +425,25 @@
     text-align: left;
     /*background-color: #2196f3;*/
   }
+  .asr{
+    flex:1;
+    width: 25px;
+    max-width: 25px;
+    height: 25px;
+    /*background-color: #2196f3;*/
+    margin-top: 12px;
+    margin-left: 5px;
+  }
+  .asr img {
+    width: 100%;
+    height: 100%;
+  }
   .mobile_test_input{
     flex: 8;
   }
   .mobile_test_input input{
-    margin: 8px;
+    margin-top: 8px;
+    margin-left: 5px;
     border: none;
     width: 100%;
     height: 34px;
@@ -585,5 +685,42 @@
     .v-enter-active, .v-leave-active {
         transition :all .8s ease;
     }
+  .asr_loading{
+    width: 100%;
+    height:140px;
+    position: fixed;
+    top: 40%;
+    left: 0;
+  }
+  .loading{
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    position: relative;
+    /*z-index: 1;*/
+  }
+  .loading img{
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    /*color: #9eea6a;*/
+    /*z-index: 9;*/
+    /*position: absolute;*/
+  }
+  .load_back{
+    width: 100%;
+    height: 0%;
+    background-color: rgba(158, 234, 106, 0.76);
+    position: absolute;
+    border-radius: 10px;
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    /*left: -50px;*/
+    /*z-index: -1;*/
+
+  }
 
 </style>

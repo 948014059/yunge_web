@@ -15,13 +15,13 @@ module.exports = {
         target:'http://192.168.3.7:8888/',
         changeOrigin:true,
         pathRewrite:{
-          '^/apis':''
+          '^/apis':'/api'
         }
       }
     },
 
     // Various Dev Server settings
-    host: '192.168.3.7', // can be overwritten by process.env.HOST
+    host: '127.0.0.1', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
@@ -48,7 +48,22 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    cssSourceMap: true,
+    // devServer:{
+    //   proxy: {
+    //   '/api': {
+    //     target: 'http://192.168.3.7:8081/',
+    //     ws: true,
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/api': ''
+    //     }
+    //   }
+    // },
+    // // 开启https 访问时使用https://172.31.120.61:8081
+    // // https://localhost:8081 也可以访问，不过自带info请求会报错 不清楚具体原因
+    // https: true
+    // }
   },
 
   build: {

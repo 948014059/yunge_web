@@ -19,7 +19,7 @@
         </div>
         <div class="r_title">
           <div ><h4>{{i.title}}</h4></div>
-          <div style="color: rgba(109,109,109,0.59)">立即体验&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp▶</div>
+          <div class="exp" style="color: rgba(109,109,109,0.59)">立即体验▶</div>
         </div>
       </div>
     </div>
@@ -139,8 +139,13 @@
   .r_title{
     flex: 7;
     margin: 5px;
-    text-align: center;
-  }
 
+  }
+  .r_title h4{
+    text-align: left;
+  }
+  .exp{
+    text-align: right;
+  }
 </style>
 

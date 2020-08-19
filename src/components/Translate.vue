@@ -6,12 +6,12 @@
           <div class="col-sm-6 left_china">
             <textarea class="text_china"
             v-model="tran_china"
+            placeholder="请输入文字..."
             @keydown="listen($event)"></textarea>
-            <div class="tran_upload btn btn-success" @click="tran_upload">确定</div>
+            <div class="tran_upload btn btn-success" @click="tran_upload">翻译</div>
           </div>
            <div class="mobile_" v-if="!this.$store.state.isPc" style="width: 100%;height: 20px"></div>
-
-           <div class="col-sm-6 right_english">{{tran_english}}</div>
+           <div class="col-sm-6 "><div class="right_english">{{tran_english}}</div></div>
          </div>
       </div>
 
@@ -34,7 +34,7 @@
         let json_data={'question':this.tran_china,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
           this.$axios({method:'post',
           headers:{ "Content-Type": "application/json;charset=utf-8" },
-          url: 'api/post_translate',
+          url: '/post_translate',
           data:json_data,
           }).then(res=>{
             if (res.data.flag=='error'){
@@ -72,11 +72,12 @@
     right: 25px;
     bottom: 10px;
   }
-  .right_english{
-    width: 100%;
-    height: 200px;
-    background-color: #f0f0f0;
-  }
+  /*.right_english{*/
+  /*  width: 100px;*/
+  /*  !*margin: 2%;*!*/
+  /*  height: 200px;*/
+  /*  background-color: #f0f0f0;*/
+  /*}*/
   .text_china{
     width: 100%;
     height: 100%;
@@ -85,16 +86,20 @@
     outline-style: none;
     font-size: 20px;
     resize: none;
-    padding: 25px;
+    padding: 15px;
   }
+
   .right_english{
+    width: 100%;
+    /*margin: 0 auto ;*/
     text-align: left;
     /*line-height: 25px;*/
     font-size: 25px;
-    padding: 25px;
+    padding: 15px;
+    height: 200px;
     max-height: 200px;
     word-break: break-word;
     overflow-x: hidden;
+    background-color: #f0f0f0;
   }
-
 </style>
