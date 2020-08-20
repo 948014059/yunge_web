@@ -95,11 +95,10 @@
           <div class="asr" @click="asr_text=!asr_text"><img src="../assets/sound_icon.png" alt=""></div>
           <div class="mobile_test_input">
             <input type="text" v-model="textarea" @keydown="listen($event)" v-if="asr_text">
-            <input type="text" v-model="textarea" @keydown="listen($event)"
-                   @touchstart="gostart" @touchmove="gomove" @touchend="goend"
-                   placeholder="长按我可进行语音识别哦"
+            <input type="text" id="torch_asr" v-model="textarea" @keydown="listen($event)"
+                   @touchstart="gostart($event)" @touchmove="gomove($event)" @touchend="goend"
+                   :placeholder="text_plo"
                    v-if="!asr_text">
-
           </div>
           <div class="mobile_button_send" @click="send">
             发送
@@ -113,13 +112,15 @@
       <input type="file" name="image" id='file1' class="image_file"
           @change="post_face($event)">
 
-      <div class="asr_loading" v-if="hearing">
-        <div class="loading">
-          <div class="load_back" id="load_back"></div>
-          <img src="../assets/sound_icon2.png" alt="">
-          <div>录音中，上划取消</div>
+      <transition name="hearing">
+        <div class="asr_loading" v-show="hearing">
+          <div class="loading" id="loading">
+            <div class="load_back" id="load_back"></div>
+            <img src="../assets/sound_icon2.png" alt="">
+            <div>录音中，上划取消</div>
+          </div>
         </div>
-      </div>
+      </transition>
 
       <transition name="alert">
       <div class="alert alert-warning alert-dismissible " role="alert" v-if="alert">
@@ -157,22 +158,18 @@
           {ai_name:'小歌',state:false,ai_img:require('../assets/cat.png'),messages:'hahahah',bg:false},
         ],
         asr_text:true,
-        chat_contents:[
-          // {msg:'msg',ai:false,img:''},
-          // {msg:'msg',ai:true,img:''},
-          // {msg:'msg',ai:false,img:''},
-          // {msg:'msg',ai:false,img:''},
-          // {msg:'msg',ai:false,img:''},
-          // {msg:'msg',ai:false,img:''},
-        ],
+        chat_contents:[],
         textarea:'',
+        text_plo:'长按我可进行语音识别哦',
         image_base64:'',
         asr_time:0,
         asr_timer:null,
+        torch_startY:1,
+        send_sound:true,
       }
     },
     methods:{
-      //
+      // pc 端获取 在线状态
       get_state(state){
         if (state){
           return require('../assets/green_point.png')
@@ -181,6 +178,7 @@
           return require('../assets/red_point.png')
         }
       },
+      //pc 端 更换聊天对象
       change_ai(index){
         if (this.ai_lists[index].state==true){
           for (var i=0 ;i<this.ai_lists.length;i++){
@@ -196,22 +194,25 @@
         }
 
       },
+      //添加聊天列表
       add_contents(msg,ai,img){
+        //信息 ，是ai还是人 ，图片
         this.chat_contents.push({msg:msg,ai:ai,img:img})
       },
+      //发送消息
       send(){
-        // console.log(this.textarea)
         this.add_contents(this.textarea,false,'')
         this.ai_return(this.textarea)
-        // this.add_contents(ai_res,true,'')
         this.textarea=''
       },
+      //默认将滚动条拉到最下
       scrolltoBottom(){
         this.$nextTick(function () {
           let  div=document.getElementById('show_')
           div.scrollTop=div.scrollHeight
         })
       },
+      //监听回车事件
       listen(e){
         if (e.keyCode===13){
           this.send()
@@ -219,6 +220,7 @@
           return false
         }
       },
+      //调用api 获取返回的聊天内容
       ai_return(str){
           let json_data={'question':str,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
           this.$axios({method:'post',
@@ -235,13 +237,12 @@
             }
 
           })
-          // str.replace('?','!')
-        // return str
-
       },
+      //上传图片1
       upload_yolo(){
         document.querySelector('#file').click()
       },
+      //上传图片2
       upload_face(){
         document.querySelector('#file1').click()
       },
@@ -256,7 +257,7 @@
         this.image_to_base64(files,'/post_face')
         // this.post_image()
       },
-
+      //上传图片
       post_image(url){
         // let files=document.querySelector('#file').files[0]
         // this.image_to_base64(files)
@@ -277,6 +278,7 @@
 
         })
       },
+      //压缩图片
       compress(img, size) {
             let canvas = document.createElement('canvas')
             let ctx = canvas.getContext('2d')
@@ -295,7 +297,7 @@
             console.log(ndata.length / 1024/1024)
             this.image_base64=ndata
         },
-
+      //图片转base64
       image_to_base64(file,url){
         let self =this
         var reader= new FileReader()
@@ -319,6 +321,7 @@
           console.log('error')
         }
       },
+      //获得图片地址
       getObjectURL(file){
         let url=null
         if (window.createObjectURL != undefined){
@@ -332,21 +335,53 @@
         }
         return url
       },
-      gostart(){
+      //长按事件开始
+      gostart(event){
+        //获取点击时的坐标
+        this.torch_startY=event.touches[0].pageY
+        //开启定时器
         this.asr_timer=setInterval(()=>{
           this.asr_time+=1
         },1000)
-        recorder.start()
+      },
 
+      //长按事件中途移动
+      gomove(event){
+        event.preventDefault();
+        //获取移动的垂直距离
+        let moveY=Math.abs(event.touches[0].pageY-this.torch_startY)
+        let loading=document.getElementById('loading')
+        //如果移动距离>200
+        if (moveY>200){
+          loading.style.width='150px'
+          loading.style.height='150px'
+          this.send_sound=false
+        }
+        else {
+          loading.style.width='140px'
+          loading.style.height='140px'
+          this.send_sound=true
+        }
       },
-      gomove(){
-        this.stop_interval()
-        recorder.stop()
-        recorder.destroy()
-      },
+      //长按事件结束
       goend(){
-        this.stop_interval()
-        recorder.stop()
+        //如果 移动距离小于200 或者 录制时间小于1s 初始化
+        if (!this.send_sound || this.asr_time<=2){
+          this.stop_interval()
+          recorder.stop()
+          recorder.destroy()
+          this.send_sound=true
+        }
+        //初始化，停止录音 发送录音数据
+        else {
+          console.log('send')
+          this.stop_interval()
+          recorder.stop()
+          this.send_sound_dtype()
+        }
+      },
+      //上传录音数据
+      send_sound_dtype(){
         let pcm=recorder.getPCMBlob()
         let formdata= new FormData()
         formdata.append('file',pcm)
@@ -359,38 +394,61 @@
           contentType: false,
           }).then(res=>{
             if (res.data.flag=='error'){
-              this.textarea=res.data.flag
+              this.text_plo=res.data.asr_word
             }else {
               this.textarea=res.data.asr_word
             }
 
           })
-
       },
+      //初始化
       stop_interval(){
+        //清除定时器
         clearInterval(this.asr_timer)
         this.asr_timer=null
         this.asr_time=0
+        //隐藏提示框
         this.hearing=false
       }
     },
+    //权限
     mounted () {
     // this.scrolltoBottom()
       this.ai_return('robot')
+      Recorder.getPermission().then(() => {
+        console.log('给权限了');
+          }, (error) => {
+        this.luyin=error
+        console.log(`${error.name} : ${error.message}`);
+    });
     },
     watch:{
+      //滚动条
       chat_contents(new_val){
         this.scrolltoBottom()
       },
+      //录制声音时间
       asr_time(new_val){
+          //如果长按时间>1s
           if (new_val>=1){
-            console.log(new_val)
+            //开始录音 显示提示框
+            recorder.start()
             this.hearing=true
+            //提示剩余时间
             let  load_back=document.getElementById('load_back')
-            load_back.style.height=(new_val-1)*10+'%'
+            load_back.style.background='rgba(158, 234, 106, 0.76)'
+            load_back.style.top=140-(new_val-1)*14+'px'
+            if (new_val>=9){
+              load_back.style.background='rgba(200,8,7,0.63)'
+            }
           }
+          //当录音时间=10s时
           if (new_val==11){
-            // this.stop_interval()
+            try {
+                  window.navigator.vibrate(1000)
+                }catch (e) {
+                  console.log(e)
+            }
             this.goend()
           }
       }
@@ -401,7 +459,7 @@
 </script>
 
 <style scoped>
-  input {
+  * {
     -webkit-touch-callout:none;
     -webkit-user-select:none;
     -khtml-user-select:none;
@@ -410,13 +468,11 @@
     user-select:none;
   }
   .mobile{
-    margin: 0;
     width: 100%;
     /*height: 600px;*/
-    margin-top: -55px;
     background: white;
     border-radius: 20px;
-    margin-bottom: -55px;
+    margin: -55px 0;
   }
   .mobile_bottom{
     width: 100%;
@@ -586,7 +642,6 @@
     -webkit-line-clamp: 3;
     /*white-space: nowrap;*/
   }
-
   .gossip_right{
     flex: 7;
     max-width: 600px;
@@ -685,6 +740,7 @@
     .v-enter-active, .v-leave-active {
         transition :all .8s ease;
     }
+
   .asr_loading{
     width: 100%;
     height:140px;
@@ -699,28 +755,32 @@
     background-color: rgb(230, 230, 230);
     border-radius: 10px;
     position: relative;
-    /*z-index: 1;*/
+    overflow: hidden;
+    transition:  all 0.5s ease;
   }
+
   .loading img{
     width: 60px;
     height: 60px;
     margin-top: 30px;
-    /*color: #9eea6a;*/
-    /*z-index: 9;*/
-    /*position: absolute;*/
   }
   .load_back{
     width: 100%;
-    height: 0%;
-    background-color: rgba(158, 234, 106, 0.76);
+    height: 100%;
+    /*background-color: rgba(158, 234, 106, 0.76);*/
     position: absolute;
+    top: 140px;
     border-radius: 10px;
     transform: rotate(180deg);
     transition: all 0.5s ease;
-    overflow: hidden;
-    /*left: -50px;*/
-    /*z-index: -1;*/
-
   }
+
+  .hearing-enter, .hearing-leave-to {
+    opacity : 0 ;
+      transform: translateZ(20px);
+    }
+    .hearing-enter-active, .hearing-leave-active {
+        transition :all .8s ease;
+    }
 
 </style>

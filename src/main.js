@@ -15,9 +15,9 @@ import  apiconfig from '../config/api.config'
 import Vuex from 'vuex'
 
 //v-conlose
-import Vconsole from 'vconsole';
-const vConsole = new Vconsole();
-Vue.use(vConsole)
+// import Vconsole from 'vconsole';
+// const vConsole = new Vconsole();
+// Vue.use(vConsole)
 
 //条形图
 Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme)
@@ -40,7 +40,6 @@ Vue.prototype.$axios=axios
 //网络请求
 axios.defaults.headers.post["Content-type"] = "application/json"
 axios.defaults.baseURL=apiconfig.baseUrl
-// axios.defaults.baseURL='/api/'
 
 Vue.config.productionTip = false
 Vue.use(vueAxios,axios)
