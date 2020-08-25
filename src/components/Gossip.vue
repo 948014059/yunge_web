@@ -92,13 +92,15 @@
 
             </div>
         <div class="mobile_bottom">
-          <div class="asr" @click="asr_text=!asr_text"><img src="../assets/sound_icon.png" alt=""></div>
+          <div class="asr" @click="listing"><img src="../assets/sound_icon.png" alt=""></div>
           <div class="mobile_test_input">
-            <input type="text" v-model="textarea" @keydown="listen($event)" v-if="asr_text">
-            <input type="text" id="torch_asr" v-model="textarea" @keydown="listen($event)"
+            <input type="text" v-model="textarea" @keydown="listen($event)" v-if="asr_text"
+            placeholder="你想对我说什么呀">
+
+            <div id="torch_asr" @keydown="listen($event)"
                    @touchstart="gostart($event)" @touchmove="gomove($event)" @touchend="goend"
                    :placeholder="text_plo"
-                   v-if="!asr_text">
+                 v-if="!asr_text">长按语音识别</div>
           </div>
           <div class="mobile_button_send" @click="send">
             发送
@@ -166,6 +168,7 @@
         asr_timer:null,
         torch_startY:1,
         send_sound:true,
+        alert_ios:false
       }
     },
     methods:{
@@ -335,14 +338,26 @@
         }
         return url
       },
+
+      listing(){
+        // console.log(this.$store.state.is_iphone)
+        if (this.$store.state.is_iphone && !this.alert_ios){
+          alert('由于ios不支持除自带浏览器外的浏览器申请录音权限，请使用Safari打开本网址以体验语音识别功能:' +
+            'https://test.smartyg.com/Gossip')
+          this.alert_ios=true
+        }
+          this.asr_text=!this.asr_text
+
+      },
+
       //长按事件开始
       gostart(event){
         //获取点击时的坐标
         this.torch_startY=event.touches[0].pageY
         //开启定时器
         this.asr_timer=setInterval(()=>{
-          this.asr_time+=1
-        },1000)
+          this.asr_time+=0.5
+        },500)
       },
 
       //长按事件中途移动
@@ -385,7 +400,6 @@
         let pcm=recorder.getPCMBlob()
         let formdata= new FormData()
         formdata.append('file',pcm)
-        formdata.append('name','dada')
           this.$axios({method:'post',
           url: '/post_sound_btype',
            cache:false,
@@ -393,8 +407,9 @@
           processData: false,// 告诉axios不要去处理发送的数据(重要参数)
           contentType: false,
           }).then(res=>{
+            this.asr_text=true
             if (res.data.flag=='error'){
-              this.text_plo=res.data.asr_word
+              this.textarea=res.data.asr_word
             }else {
               this.textarea=res.data.asr_word
             }
@@ -430,7 +445,13 @@
       //录制声音时间
       asr_time(new_val){
           //如果长按时间>1s
-          if (new_val>=1){
+          if (new_val==0.5){
+            try {
+                  window.navigator.vibrate(500)
+                }catch (e) {console.log(e)}
+          }
+
+          if (new_val>=0.5){
             //开始录音 显示提示框
             recorder.start()
             this.hearing=true
@@ -443,7 +464,7 @@
             }
           }
           //当录音时间=10s时
-          if (new_val==11){
+          if (new_val==10.5){
             try {
                   window.navigator.vibrate(1000)
                 }catch (e) {
@@ -459,14 +480,6 @@
 </script>
 
 <style scoped>
-  * {
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-  }
   .mobile{
     width: 100%;
     /*height: 600px;*/
@@ -518,6 +531,9 @@
     text-align: center;
     border-radius: 10px;
     color: white;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+      -ms-user-select:none;
   }
 
   .alert{
@@ -741,6 +757,25 @@
         transition :all .8s ease;
     }
 
+    #torch_asr{
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      margin-top: 8px;
+      margin-left: 5px;
+      border: none;
+      width: 100%;
+      height: 34px;
+      /*margin-top: 10px;/*/
+      outline-style: none;
+      font-size: 20px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+      text-align: center;
+      color:  #cccccc;
+      line-height: 34px;
+    }
   .asr_loading{
     width: 100%;
     height:140px;
@@ -772,7 +807,7 @@
     top: 140px;
     border-radius: 10px;
     transform: rotate(180deg);
-    transition: all 0.5s ease;
+    transition: all 0.25s ease;
   }
 
   .hearing-enter, .hearing-leave-to {

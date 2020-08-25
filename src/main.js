@@ -14,10 +14,10 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion'
 import  apiconfig from '../config/api.config'
 import Vuex from 'vuex'
 
-//v-conlose
-// import Vconsole from 'vconsole';
-// const vConsole = new Vconsole();
-// Vue.use(vConsole)
+// v-conlose
+import Vconsole from 'vconsole';
+const vConsole = new Vconsole();
+Vue.use(vConsole)
 
 //条形图
 Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme)
@@ -26,7 +26,8 @@ Vue.use(Vuex)
 const store =new Vuex.Store({
   state:{
     isPc:true,
-    mobile_title:true
+    mobile_title:true,
+    is_iphone:false,
   }
 })
 

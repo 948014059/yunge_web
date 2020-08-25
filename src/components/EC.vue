@@ -19,7 +19,9 @@
         </div>
         <div class="r_title">
           <div ><h4>{{i.title}}</h4></div>
-          <div class="exp" style="color: rgba(109,109,109,0.59)">立即体验▶</div>
+          <div class="exp" style="color: rgba(109,109,109,0.59)">立即体验
+            <img src="../assets/Goforward.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -78,6 +80,7 @@
     },
     methods:{
       link_to(url){
+
         this.$router.push(url)
       }
     }
@@ -139,13 +142,23 @@
   .r_title{
     flex: 7;
     margin: 5px;
-
+    display: flex;
   }
   .r_title h4{
-    text-align: left;
+    display: block;
+    margin-left: 5px;
+    line-height: 62px;
+    text-align: center;
+    flex: 5;
   }
   .exp{
+    line-height: 62px;
     text-align: right;
+    flex: 5;
+  }
+  .exp img{
+    width: 32px;
+    height: 32px;
   }
 </style>
 

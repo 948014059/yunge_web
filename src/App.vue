@@ -70,8 +70,17 @@ export default {
         let flag=true
         for (let v=0;v<Agents.length;v++){
           let name=new RegExp(Agents[v]);
+          let iphone=new RegExp(Agents[1]);
+          let ipad=new RegExp(Agents[4]);
+          let ipod=new RegExp(Agents[5]);
+          // console.log('iPhone'.test(userAgentInfo))
+          // console.log(name)
           if (name.test(userAgentInfo)){
+
             this.$store.state.isPc=false
+            if(iphone.test(userAgentInfo) || ipad.test(userAgentInfo) || ipod.test(userAgentInfo)){
+              this.$store.state.is_iphone=true
+            }
             break
           }
         }
