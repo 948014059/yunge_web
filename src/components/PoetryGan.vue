@@ -1,7 +1,7 @@
 <template>
     <div class="poetry_box">
 
-      <div id="wrap">
+      <div id="wrap"  v-if="this.$store.state.isPc">
         <div id="from-wrap">
           <div class="form">
             <p>您好</p>
@@ -37,6 +37,37 @@
         </div>
 <!--        <div class="open btn btn-danger">打开</div>-->
       </div>
+
+      <div class=" mobile_poetrygan shadow p-3 mb-5 bg-white rounded">
+        <div class="select_box">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-outline-secondary"
+                  @click="post_data">{{choose}}</button>
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" v-for="(item,index) of memus"
+                    @click="choose_(index)">{{item}}</a>
+                  </div>
+                </div>
+                <input type="text" class="form-control"
+                       style="outline-style: none"
+                       v-model="text"
+                       :placeholder="placeholder"
+                       aria-label="Text input with segmented dropdown button">
+              </div>
+            </div>
+        <div class="mobile_show_poetry" style="white-space: pre-line;text-align: center" v-if="!this.$store.state.isPc">
+          <div v-html="mobile_poetry"></div>
+        </div>
+        <div>
+          <img src="../assets/ythn.gif" alt="">
+        </div>
+
+      </div>
+
       <div id="main" v-show="upload_show">
         <div class="box">
 
@@ -64,9 +95,12 @@
           placeholder:'随机生成，无需输入数据',
           url:'/post_poetry',
           text:'',
-          poetry:'寒随穷律变，春逐鸟声开。\n初风飘带柳，晚雪间花梅。\n碧林青旧竹，绿沼翠新苔。\n芝田初雁去，绮树巧莺来。',
+          poetry:'寒随穷律变，春逐鸟声开。\n初风飘带柳，晚雪间花梅。\n碧林青旧竹，绿沼翠新苔。\n芝田初雁去，绮树巧莺来。。',
           upload_show:false,
           upload_flag:{'pro':'上传中...0%'},
+          mobile_poetry:'',
+          i:0,
+          timer:0,
       }
     },
     methods:{
@@ -77,6 +111,7 @@
         this.placeholder=this.placeholders[index]
       },
       post_data(){
+        var that =this
         this.upload_show=true
         var  json_data={'choose':this.choose,
         'text':this.text,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
@@ -100,9 +135,28 @@
           // this.$emit('returnres',res.data)
           this.upload_show=false
           this.poetry=res.data.char
+          this.i=0;this.timer=0;this.mobile_poetry=''
+          this.mobile_poetry_show()
         })
       },
+
+      mobile_poetry_show(){
+        if (this.i<this.poetry.length){
+          this.mobile_poetry=this.poetry.slice(0,this.i++)+'_';
+          this.timer=setTimeout(()=>{
+            this.mobile_poetry_show();
+          },200)
+        }else {
+          clearTimeout(this.timer)
+        }
+      }
+
     },
+    mounted () {
+      if (!this.$store.state.isPc){
+        this.mobile_poetry_show()
+      }
+    }
 
   }
 </script>
@@ -227,6 +281,12 @@
     color: white;
     display: block;
     text-align: center;
+  }
+  .mobile_poetrygan{
+    margin-top: -50px;
+  }
+  .mobile_show_poetry{
+    margin-top: 50px;
   }
 
 

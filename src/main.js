@@ -15,9 +15,9 @@ import  apiconfig from '../config/api.config'
 import Vuex from 'vuex'
 
 // v-conlose
-import Vconsole from 'vconsole';
-const vConsole = new Vconsole();
-Vue.use(vConsole)
+// import Vconsole from 'vconsole';
+// const vConsole = new Vconsole();
+// Vue.use(vConsole)
 
 //条形图
 Vue.use(VueFusionCharts, FusionCharts, Column2D, FusionTheme)

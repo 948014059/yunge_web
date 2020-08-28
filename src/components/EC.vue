@@ -12,6 +12,7 @@
           </div>
         </div>
      </div>
+
     <div class="mobile_ec" v-if="!this.$store.state.isPc">
       <div class="mobile_ec_list shadow p-1 mb-2 bg-white rounded" v-for="i in eclist" @click="link_to(i.link_)">
         <div class="l_img">
@@ -119,13 +120,37 @@
     z-index: 9;
     opacity: 0.9;
   }
+
+
   .mobile_ec_list{
+    background-image: linear-gradient(125deg, #e7e4e4, #c7c9c9, #ebebec, #f8f7f7, rgba(146, 231, 193, 0.71));
+    background-size: 400%;
+    animation: bganimation 15s infinite;
+
     /*width: 96%;*/
     height: 80px;
     /*background-color: white;*/
     /*margin: 2%;*/
     display: flex;
   }
+
+  @keyframes bganimation {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    75%{
+      background-position: 50% 100%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+
+  }
+
+
   .l_img{
     flex: 3;
     max-width: 60px;
