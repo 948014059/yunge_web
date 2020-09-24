@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/ythn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/book1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/book2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/book3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/dl_int_left.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/dl_int_top.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jqqd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/jqqd_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/nlp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/nlp_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AI_Book.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PoetryGan.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PoetryGan.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +50,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -57,18 +71,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -141,7 +161,8 @@
       <workItem from="1598322821139" duration="12737000" />
       <workItem from="1598350372492" duration="36000" />
       <workItem from="1598514474911" duration="14068000" />
-      <workItem from="1598605361221" duration="18000" />
+      <workItem from="1598605361221" duration="5623000" />
+      <workItem from="1600911386187" duration="13716000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -367,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598350381329</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="add asr and recorder">
+      <created>1598605388306</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1598605388306</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,30 +428,30 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="481" y="238" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597824891520" />
-    <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1591347840324">
+    <state x="636" y="420" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1600911879566">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="556" y="277" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1591347840324" />
+    <state x="636" y="420" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1600911879566" />
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596678695739">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1596678695739" />
-    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1598350378439">
+    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1598605387061">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1598350378439" />
+    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1598605387061" />
     <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1598522193133">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1598522193133" />
-    <state x="291" y="112" key="SettingsEditor" timestamp="1596191624215">
+    <state x="407" y="285" key="SettingsEditor" timestamp="1600911887113">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="291" y="112" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1596191624215" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598350398220">
+    <state x="407" y="285" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1600911887113" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598605394326">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598350398220" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598605394326" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
