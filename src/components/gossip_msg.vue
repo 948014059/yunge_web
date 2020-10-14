@@ -7,6 +7,17 @@
         </div>
         <div class="ai_msg">
           <span v-html="msg_obj.msg"></span>
+          <div class="music_box" v-if="msg_obj.music">
+            <div class="music_box_left">
+              <img src="../assets/bf_music.png" alt="" @click="bf_music(msg_obj.music.id,$event)">
+            </div>
+            <div class="music_box_right">
+              <h5>{{msg_obj.music.name}}</h5>
+              <marquee >{{msg_obj.music.person}}-{{msg_obj.music.name}}</marquee >
+            </div>
+            <audio :src="msg_obj.music.url" controls="controls" :id="msg_obj.music.id"></audio>
+          </div>
+
           <div class="img_box" v-if="msg_obj.img">
             <img :src="msg_obj.img" alt="" >
           </div>
@@ -15,7 +26,6 @@
       </div>
 
       <div class="mine_box"
-
            v-if="!msg_obj.ai">
         <div class="mine_icon">
           <img src="../assets/person_icon.jpg" alt="">
@@ -64,14 +74,31 @@
         else {
           return require('../assets/ai_xiaoge.jpeg')
         }
-      }
+      },
+      bf_music(id,event){
+        event.stopPropagation();
+        console.log(id)
+        var audio= document.getElementById(id)
+
+          if(audio.paused){ //如果当前是暂停状态
+                audio.play(); //播放
+            }else{//当前是播放状态
+                audio.pause(); //暂停
+        }
+
+
+      },
 
 
     },
     mounted () {
       if (this.msg_obj.img){
         this.height=150
-      }else {
+      }
+      else if (this.msg_obj.music){
+        this.height=100
+      }
+      else {
         let cont_len = this.cont_len(this.msg_obj.msg)
         // console.log(cont_len)
         let line_height_=Math.ceil(cont_len/22)
@@ -100,6 +127,7 @@
     /*display:table*/
     /*width:max-content;*/
   }
+
 
   .ai_box{
     width: 360px;
@@ -158,6 +186,61 @@
     word-break: break-all;
 
   }
+
+  .music_box{
+    /*width: 245px;*/
+    display: flex;
+    height: 80px;
+
+  }
+  .music_box_left{
+    flex: 4;
+    min-width: 80px;
+    min-height: 80px;
+    background-image: url("../assets/mv_bg.jpg");
+    background-size: 80px;
+  }
+  .music_box_left img {
+    width: 40px;
+    height: 40px;
+    margin: 20px ;
+    opacity: 0.6;
+   }
+
+  .music_box_left img:hover{
+    opacity: 0.9;
+  }
+
+  .music_box_right{
+    flex: 8;
+    min-width: 165px;
+    min-height: 80px;
+  }
+  .music_box_right h5{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+  }
+  .music_box_right marquee {
+    height: 15px;
+    line-height: 15px;
+    margin-left: 10px;
+    color: rgba(244, 244, 244, 0.59);
+    overflow: -webkit-marquee;
+    font-size: 15px;
+    white-space: nowrap;
+    -webkit-marquee-direcTIon:left;
+    -webkit-marquee-repeTITIon:infinite;
+  }
+
+  .music_box audio{
+    width: 0px;
+    height: 0px;
+
+  }
+
   .img_box{
     width: 200px;
     height: 130px;

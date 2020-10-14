@@ -215,21 +215,22 @@
       },
 
       //添加聊天列表
-      add_contents(msg,ai,img){
+      add_contents(msg,ai,img,music){
         //信息 ，是ai还是人 ，图片
         if (this.ai_talk_with=='小云'){
-          this.chat_contents_xiaoyun.push({msg:msg,ai:ai,img:img})
+          this.chat_contents_xiaoyun.push({msg:msg,ai:ai,img:img,music:music})
         }
         else {
-          this.chat_contents_xiaoge.push({msg:msg,ai:ai,img:img})
+          this.chat_contents_xiaoge.push({msg:msg,ai:ai,img:img,music:music})
         }
 
       },
       //发送消息
       send(){
-        this.add_contents(this.textarea,false,'')
+        this.add_contents(this.textarea,false,'','')
         this.ai_return(this.textarea,this.alive)
         this.textarea=''
+        // this.scrolltoBottom()
       },
       //默认将滚动条拉到最下
       scrolltoBottom(){
@@ -260,7 +261,8 @@
               this.add_contents('错误！',true,'')
               this.ai_lists[0].messages='错误！'
             }else {
-              this.add_contents(res.data.answay,true,'')
+              // var music ={person:'dada',name:'55',url:'http://music.163.com/song/media/outer/url?id=1428243603'}
+              this.add_contents(res.data.answay,true,'',res.data.music)
               this.ai_lists[0].messages=res.data.answay
             }
 
@@ -275,7 +277,6 @@
           var str=time+'dada'+random_seed
           this.hash_=str
       },
-
 
 
       //上传图片1
@@ -484,7 +485,10 @@
 
     watch:{
       //滚动条
-      chat_contents(new_val){
+      chat_contents_xiaoyun(new_val){
+        this.scrolltoBottom()
+      },
+      chat_contents_xiaoge(new_val){
         this.scrolltoBottom()
       },
       //录制声音时间

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/ai_xiaoge.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/bf_music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/mv_bg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/api.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EC.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EC.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Gossip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gossip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/YOLO3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/YOLO3.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gossip_msg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gossip_msg.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +160,8 @@
       <workItem from="1601281063758" duration="557000" />
       <workItem from="1601350567872" duration="40000" />
       <workItem from="1601456201856" duration="1817000" />
-      <workItem from="1602574643244" duration="9696000" />
+      <workItem from="1602574643244" duration="10527000" />
+      <workItem from="1602660231025" duration="10166000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -403,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600939539629</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add xiaoge gossip">
+      <created>1602646264224</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1602646264224</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +434,8 @@
     <MESSAGE value="update gossip" />
     <MESSAGE value="translate add" />
     <MESSAGE value="add asr and recorder" />
-    <option name="LAST_COMMIT_MESSAGE" value="add asr and recorder" />
+    <MESSAGE value="add xiaoge gossip" />
+    <option name="LAST_COMMIT_MESSAGE" value="add xiaoge gossip" />
   </component>
   <component name="WindowStateProjectService">
     <state x="481" y="238" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597824891520">
@@ -444,10 +450,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1596678695739" />
-    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1600939534552">
+    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1602646262459">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1600939534552" />
+    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1602646262459" />
     <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1600942028422">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -456,10 +462,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="434" y="238" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1600939574856" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1600939582070">
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1602646271144">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1600939582070" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1602646271144" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
