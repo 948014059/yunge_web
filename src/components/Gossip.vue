@@ -36,11 +36,11 @@
               <h4>{{ai_talk_with}}正在与您聊天...</h4>
             </div>
             <div class="show_" id="show_">
-              <viewer :images="chat_contents">
+              <viewer :images="get_activate()">
                 <transition-group>
                 <div class="chat_content"
-                     v-for="(item,index) of chat_contents" :key="index">
-                  <gossip_msg :msg_obj="item"></gossip_msg>
+                     v-for="(item,index) of get_activate()" :key="index">
+                  <gossip_msg :msg_obj="item" :ai_="ai_talk_with"></gossip_msg>
 <!--                  {{item}}-->
                 </div>
                 </transition-group>
@@ -79,11 +79,11 @@
 <!--      移动端显示-->
       <div class="mobile" v-if="!$store.state.isPc">
         <div class="show_" id="show_">
-              <viewer :images="chat_contents">
+              <viewer :images="get_activate()">
                 <transition-group>
                 <div class="chat_content"
-                     v-for="(item,index) of chat_contents" :key="index">
-                  <gossip_msg :msg_obj="item"></gossip_msg>
+                     v-for="(item,index) of get_activate()" :key="index">
+                  <gossip_msg :msg_obj="item" :ai_="ai_talk_with"></gossip_msg>
 <!--                  {{item}}-->
                 </div>
                 </transition-group>
@@ -153,14 +153,15 @@
         url:'',
         hearing:false,
         alert:false,
-        ai_talk_with:'小云',
+        ai_talk_with:'小歌',
         ai_no_alive:'',
         ai_lists:[
-          {ai_name:'小云',state:true,ai_img:require('../assets/ai_xiaoyun.jpg'),messages:'dadadada',bg:true},
-          {ai_name:'小歌',state:false,ai_img:require('../assets/cat.png'),messages:'hahahah',bg:false},
+          {ai_name:'小云',state:true,ai_img:require('../assets/ai_xiaoyun.jpg'),messages:'dadadada',bg:false},
+          {ai_name:'小歌',state:true,ai_img:require('../assets/ai_xiaoge.jpeg'),messages:'hahahah',bg:true},
         ],
         asr_text:true,
-        chat_contents:[],
+        chat_contents_xiaoyun:[],
+        chat_contents_xiaoge:[],
         textarea:'',
         text_plo:'长按我可进行语音识别哦',
         image_base64:'',
@@ -168,7 +169,9 @@
         asr_timer:null,
         torch_startY:1,
         send_sound:true,
-        alert_ios:false
+        alert_ios:false,
+        hash_:'',
+        alive:true,
       }
     },
     methods:{
@@ -190,6 +193,9 @@
         // console.log(this.ai_lists)
           this.ai_lists[index].bg=true
           this.ai_talk_with=this.ai_lists[index].ai_name
+          if (this.chat_contents_xiaoyun.length==0 || this.chat_contents_xiaoge.length==0){
+            this.ai_return('robot',true)
+          }
         }
         else {
           this.alert=true
@@ -197,15 +203,32 @@
         }
 
       },
+
+      //判断是那位在营业
+      get_activate(){
+          if (this.ai_talk_with=='小云'){
+            return this.chat_contents_xiaoyun
+          }
+          else {
+            return  this.chat_contents_xiaoge
+          }
+      },
+
       //添加聊天列表
       add_contents(msg,ai,img){
         //信息 ，是ai还是人 ，图片
-        this.chat_contents.push({msg:msg,ai:ai,img:img})
+        if (this.ai_talk_with=='小云'){
+          this.chat_contents_xiaoyun.push({msg:msg,ai:ai,img:img})
+        }
+        else {
+          this.chat_contents_xiaoge.push({msg:msg,ai:ai,img:img})
+        }
+
       },
       //发送消息
       send(){
         this.add_contents(this.textarea,false,'')
-        this.ai_return(this.textarea)
+        this.ai_return(this.textarea,this.alive)
         this.textarea=''
       },
       //默认将滚动条拉到最下
@@ -224,8 +247,10 @@
         }
       },
       //调用api 获取返回的聊天内容
-      ai_return(str){
-          let json_data={'question':str,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c'}
+      ai_return(str,state){
+
+          let json_data={'question':str,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c',
+          'id':this.ai_talk_with,'random_str':this.hash_,'state':state}
           this.$axios({method:'post',
           headers:{ "Content-Type": "application/json;charset=utf-8" },
           url: '/post_gossip',
@@ -241,6 +266,18 @@
 
           })
       },
+
+      //获取随机字符进行区分用户
+      get_hash(){
+          var d= new Date()
+          var time = d.getTime()
+          var random_seed=Math.ceil(Math.random()*60)
+          var str=time+'dada'+random_seed
+          this.hash_=str
+      },
+
+
+
       //上传图片1
       upload_yolo(){
         document.querySelector('#file').click()
@@ -338,7 +375,7 @@
         }
         return url
       },
-
+      //录音
       listing(){
         // console.log(this.$store.state.is_iphone)
         if (this.$store.state.is_iphone && !this.alert_ios){
@@ -347,7 +384,6 @@
           this.alert_ios=true
         }
           this.asr_text=!this.asr_text
-
       },
 
       //长按事件开始
@@ -429,14 +465,23 @@
     //权限
     mounted () {
     // this.scrolltoBottom()
-      this.ai_return('robot')
+      this.ai_return('robot',true)
+
       Recorder.getPermission().then(() => {
         console.log('给权限了');
           }, (error) => {
         this.luyin=error
         console.log(`${error.name} : ${error.message}`);
     });
+      this.get_hash()
     },
+
+    //退出页面
+    beforeDestroy () {
+      this.ai_return(this.textarea,false)
+    },
+
+
     watch:{
       //滚动条
       chat_contents(new_val){

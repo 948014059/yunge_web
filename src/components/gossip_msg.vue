@@ -3,7 +3,7 @@
       <div class="ai_box"
            v-if="msg_obj.ai">
         <div class="ai_icon">
-          <img src="../assets/ai_xiaoyun.jpg" alt="">
+          <img :src="get_aipng()" alt="">
         </div>
         <div class="ai_msg">
           <span v-html="msg_obj.msg"></span>
@@ -36,6 +36,7 @@
     name: 'gossip_msg',
     props:{
       msg_obj:{},
+      ai_:'',
     },
     data(){
       return{
@@ -56,6 +57,14 @@
         }
         return len
       },
+      get_aipng(){
+        if (this.ai_=='小云'){
+          return require('../assets/ai_xiaoyun.jpg')
+        }
+        else {
+          return require('../assets/ai_xiaoge.jpeg')
+        }
+      }
 
 
     },
