@@ -40,7 +40,7 @@
                 <transition-group>
                 <div class="chat_content"
                      v-for="(item,index) of get_activate()" :key="index">
-                  <gossip_msg :msg_obj="item" :ai_="ai_talk_with"></gossip_msg>
+                  <gossip_msg :msg_obj="item" :ai_="ai_talk_with" :add_cont="add_contents"></gossip_msg>
 <!--                  {{item}}-->
                 </div>
                 </transition-group>
@@ -83,7 +83,7 @@
                 <transition-group>
                 <div class="chat_content"
                      v-for="(item,index) of get_activate()" :key="index">
-                  <gossip_msg :msg_obj="item" :ai_="ai_talk_with"></gossip_msg>
+                  <gossip_msg :msg_obj="item" :ai_="ai_talk_with" :add_cont="add_contents"></gossip_msg>
 <!--                  {{item}}-->
                 </div>
                 </transition-group>
@@ -252,6 +252,7 @@
 
           let json_data={'question':str,'keys':'5f15a18f3f03f7e88020acb1c2f8c93c',
           'id':this.ai_talk_with,'random_str':this.hash_,'state':state}
+
           this.$axios({method:'post',
           headers:{ "Content-Type": "application/json;charset=utf-8" },
           url: '/post_gossip',

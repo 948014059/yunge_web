@@ -8,7 +8,8 @@
         <div class="ai_msg">
           <span v-html="msg_obj.msg"></span>
           <div class="music_box" v-if="msg_obj.music">
-            <div class="music_box_left">
+            <div class="music_box_left" :id="msg_obj.music.id+'_music_box'"
+                 :style="'background:url('+msg_obj.music.img+');background-size: 100% 100%;'">
               <img src="../assets/bf_music.png" alt="" @click="bf_music(msg_obj.music.id,$event)">
             </div>
             <div class="music_box_right">
@@ -47,6 +48,10 @@
     props:{
       msg_obj:{},
       ai_:'',
+      add_cont:{
+        type:Function,
+        default:null
+      }
     },
     data(){
       return{
@@ -75,19 +80,68 @@
           return require('../assets/ai_xiaoge.jpeg')
         }
       },
-      bf_music(id,event){
-        event.stopPropagation();
-        console.log(id)
-        var audio= document.getElementById(id)
 
+      bf_music(id,event){
+        var that =this
+        event.stopPropagation();
+        var audio= document.getElementById(id)
+        var id_box=document.getElementById(id+'_music_box')
           if(audio.paused){ //如果当前是暂停状态
-                audio.play(); //播放
+            // console.log(this.url_notfound(audio.src))
+            //   if (this.url_notfound(audio.src)){
+            //     audio.play(); //播放
+            //   }
+            //   else {
+            //     console.log('404')
+            //   }
+            // this.url_notfound(audio.src)
+            this.url_notfound(audio.src).then(res=>{
+               audio.play();
+               id_box.className='music_box_left xuanz'
+            }).catch(res=>{
+              that.add_cont('因版权原因，无法播放','ai','','')
+              id_box.className='music_box_left'
+            })
+
+
             }else{//当前是播放状态
                 audio.pause(); //暂停
+                id_box.className='music_box_left'
         }
 
-
       },
+
+      url_notfound(url){
+        return new Promise((resolve ,reject)=>{
+          $.ajax({
+          url:url,
+          type:'GET',
+          dataType:'jsonp',
+          complete:function (response) {
+            if (response.status==404){
+              resolve(true)
+            }
+            else {
+              reject(false)
+            }
+          }
+        })
+        })
+      },
+
+      // url_notfound(url){
+      //
+      //   this.$axios({method:'get',
+      //     headers:{ "Content-Type": "application/json;charset=utf-8" },
+      //     url: url,
+      //     data:json_data,
+      //     dataType:'jsonp',
+      //     }).then(res=>{
+      //       console.log(res)
+      //     })
+      //
+      // }
+
 
 
     },
@@ -96,7 +150,7 @@
         this.height=150
       }
       else if (this.msg_obj.music){
-        this.height=100
+        this.height=120
       }
       else {
         let cont_len = this.cont_len(this.msg_obj.msg)
@@ -197,14 +251,39 @@
     flex: 4;
     min-width: 80px;
     min-height: 80px;
-    background-image: url("../assets/mv_bg.jpg");
-    background-size: 80px;
+    /*background-image: url("https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg");*/
+    /*background-size: 100% 100%;*/
+    border-radius: 160px;
   }
+  .xuanz{
+   -webkit-transition-property: -webkit-transform;
+      -webkit-transition-duration: 1s;
+      -moz-transition-property: -moz-transform;
+      -moz-transition-duration: 1s;
+      -webkit-animation: rotate 3s linear infinite;
+      -moz-animation: rotate 3s linear infinite;
+      -o-animation: rotate 3s linear infinite;
+      animation: rotate 3s linear infinite;
+    }
+    @-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+        to{-webkit-transform: rotate(360deg)}
+    }
+    @-moz-keyframes rotate{from{-moz-transform: rotate(0deg)}
+        to{-moz-transform: rotate(359deg)}
+    }
+    @-o-keyframes rotate{from{-o-transform: rotate(0deg)}
+        to{-o-transform: rotate(359deg)}
+    }
+    @keyframes rotate{from{transform: rotate(0deg)}
+        to{transform: rotate(359deg)}
+    }
+
   .music_box_left img {
     width: 40px;
     height: 40px;
     margin: 20px ;
     opacity: 0.6;
+
    }
 
   .music_box_left img:hover{
