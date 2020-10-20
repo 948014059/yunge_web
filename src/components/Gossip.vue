@@ -153,11 +153,11 @@
         url:'',
         hearing:false,
         alert:false,
-        ai_talk_with:'小歌',
+        ai_talk_with:'汶汶',
         ai_no_alive:'',
         ai_lists:[
-          {ai_name:'小云',state:true,ai_img:require('../assets/ai_xiaoyun.jpg'),messages:'dadadada',bg:false},
-          {ai_name:'小歌',state:true,ai_img:require('../assets/ai_xiaoge.jpeg'),messages:'hahahah',bg:true},
+          {ai_name:'孜孜',state:true,ai_img:require('../assets/ai_xiaoyun.jpg'),messages:'dadadada',bg:false},
+          {ai_name:'汶汶',state:true,ai_img:require('../assets/wenwen.jpg'),messages:'hahahah',bg:true},
         ],
         asr_text:true,
         chat_contents_xiaoyun:[],
@@ -206,7 +206,7 @@
 
       //判断是那位在营业
       get_activate(){
-          if (this.ai_talk_with=='小云'){
+          if (this.ai_talk_with=='孜孜'){
             return this.chat_contents_xiaoyun
           }
           else {
@@ -217,7 +217,7 @@
       //添加聊天列表
       add_contents(msg,ai,img,music){
         //信息 ，是ai还是人 ，图片
-        if (this.ai_talk_with=='小云'){
+        if (this.ai_talk_with=='孜孜'){
           this.chat_contents_xiaoyun.push({msg:msg,ai:ai,img:img,music:music})
         }
         else {

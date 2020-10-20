@@ -73,11 +73,11 @@
         return len
       },
       get_aipng(){
-        if (this.ai_=='小云'){
+        if (this.ai_=='孜孜'){
           return require('../assets/ai_xiaoyun.jpg')
         }
         else {
-          return require('../assets/ai_xiaoge.jpeg')
+          return require('../assets/wenwen.jpg')
         }
       },
 
