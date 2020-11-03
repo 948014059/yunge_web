@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/facere_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/face_re.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/api.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/upload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +163,7 @@
       <workItem from="1603100327083" duration="600000" />
       <workItem from="1603175990159" duration="2993000" />
       <workItem from="1603185667311" duration="3117000" />
-      <workItem from="1604281580775" duration="19542000" />
+      <workItem from="1604281580775" duration="20085000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -437,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603188141840</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add face_re">
+      <created>1604389955980</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1604389955981</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +466,8 @@
     <MESSAGE value="add asr and recorder" />
     <MESSAGE value="add xiaoge gossip" />
     <MESSAGE value="change gossip api" />
-    <option name="LAST_COMMIT_MESSAGE" value="change gossip api" />
+    <MESSAGE value="add face_re" />
+    <option name="LAST_COMMIT_MESSAGE" value="add face_re" />
   </component>
   <component name="WindowStateProjectService">
     <state x="481" y="238" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597824891520">
@@ -480,22 +482,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1596678695739" />
-    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1603188139033">
+    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1604389953724">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1603188139033" />
+    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604389953724" />
     <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1604311152245">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1604311152245" />
-    <state x="434" y="238" key="SettingsEditor" timestamp="1600939574856">
+    <state x="434" y="238" key="SettingsEditor" timestamp="1604390225077">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="434" y="238" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1600939574856" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603188148310">
+    <state x="434" y="238" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604390225077" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604390232983">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1603188148310" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604390232983" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
