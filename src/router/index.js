@@ -15,7 +15,8 @@ const routerOptions = [
   { path:'/Gossip',component:'Gossip'},
   { path: '/Translate',component: 'Translate'},
   { path: '/luyin',component: 'luyin'},
-  { path: '/aibook',component: 'AI_Book' }
+  { path: '/aibook',component: 'AI_Book' },
+  { path: '/facere',component: 'face_re'}
 ]
 
 

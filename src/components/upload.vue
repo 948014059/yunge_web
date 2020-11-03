@@ -13,7 +13,6 @@
 
     <div id="main" v-show="upload_show">
       <div class="box">
-
         <div class="loading">
         <div class="spinner-border" style="" role="status">
         </div>
@@ -129,6 +128,7 @@
 
         })
       },
+
       fileclick(){
         document.querySelector('#file').click()
       },
