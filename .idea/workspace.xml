@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/ai_intr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ai_intr_left.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/api.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AI_Book.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AI_Book.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/face_re.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/face_re.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +171,12 @@
       <workItem from="1603175990159" duration="2993000" />
       <workItem from="1603185667311" duration="3117000" />
       <workItem from="1604281580775" duration="20085000" />
+      <workItem from="1604390299070" duration="1308000" />
+      <workItem from="1604556152143" duration="4289000" />
+      <workItem from="1604662709737" duration="44000" />
+      <workItem from="1606272964193" duration="3155000" />
+      <workItem from="1606380686905" duration="63000" />
+      <workItem from="1606446024744" duration="4155000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -438,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604389955981</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add face_re">
+      <created>1604390346058</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1604390346058</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,26 +498,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="636" y="420" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1600911879566" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596678695739">
+    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1604390344741">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1596678695739" />
-    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1604389953724">
+    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604390344741" />
+    <state x="1067" y="237" key="FileChooserDialogImpl" timestamp="1606380746598">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604389953724" />
-    <state x="856" y="207" key="FileChooserDialogImpl" timestamp="1604311152245">
+    <state x="1067" y="237" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606380746598" />
+    <state x="574" y="215" key="SettingsEditor" timestamp="1604390627955">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="856" y="207" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1604311152245" />
-    <state x="434" y="238" key="SettingsEditor" timestamp="1604390225077">
+    <state x="574" y="215" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604390627955" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604390653339">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="434" y="238" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604390225077" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604390232983">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604390232983" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604390653339" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

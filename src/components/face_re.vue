@@ -1,5 +1,7 @@
 <template>
-    <div class="facere_box">
+  <div class="mainbox" style="width: 100%;height: 800px" id="mainbox">
+    <div  id="facere_box" class="facere_box">
+<!--      <div style="height: 800px"></div>-->
        <input type="file" name="image" id='file' class="image_file"
           @change="show_img($event)">
 
@@ -14,7 +16,21 @@
         </div>
       </div>
 
-      <div class="uplodbox">
+
+
+
+      <div id="main" v-show="upload_show">
+      <div class="box">
+        <div class="loading">
+        <div class="spinner-border" style="" role="status">
+        </div>
+         <span>{{upload_flag.pro}}</span>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <div class="uplodbox">
         <div class="name_input">
 
           <div class="input-group flex-nowrap">
@@ -38,7 +54,7 @@
 
             <div class="input-group flex-nowrap">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="phone">电话</span>
+                <span class="input-group-text" id="phone">手机</span>
               </div>
               <input type="text" class="form-control" placeholder="" v-model="phone"
                      aria-label="Username" aria-describedby="addon-wrapping">
@@ -51,19 +67,7 @@
         </div>
         <div class="upload_bottom btn btn-success"  @click="upload_faces">提交</div>
       </div>
-
-
-      <div id="main" v-show="upload_show">
-      <div class="box">
-        <div class="loading">
-        <div class="spinner-border" style="" role="status">
-        </div>
-         <span>{{upload_flag.pro}}</span>
-        </div>
-      </div>
-    </div>
-
-    </div>
+  </div>
 </template>
 
 <script>
@@ -169,6 +173,18 @@
           this.hash_=str
       },
 
+      // scrollEvent(){
+      //
+      // },
+      getScroll(){
+            let indexNumTop = $("#mainbox").offset().top;
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            let face_box=document.getElementById('facere_box')
+              if (!!document.documentElement.scrollTop &&document.documentElement.scrollTop >= 0){
+                face_box.style.top='-'+scrollTop+'px'
+            }
+        },
+
       upload_faces(){
 
         var allowd_post = this.chick_word()
@@ -211,7 +227,10 @@
     },
     mounted () {
       this.get_hash()
-    }
+      window.addEventListener('scroll',this.getScroll)
+
+    },
+
   }
 </script>
 
@@ -225,6 +244,7 @@
     left: 0;
     background: url("../assets/facere_background.jpg");
     background-position: 100% 100%;
+
 
   }
 
@@ -244,7 +264,6 @@
     position: relative;
     /*border: 1px solid white;*/
     box-shadow: inset 0px 0px 25px 10px #2196f3;
-
   }
 
   .add_icon{
@@ -258,6 +277,7 @@
   .add_icon:hover{
     color: #cccccc;
   }
+
   .upload_img img{
     width: 100%;
     height: 100%;
@@ -288,6 +308,7 @@
       opacity: 0.2;
     }
   }
+
   .upload_img span{
     position:  absolute;
     width: 224px;
@@ -308,11 +329,14 @@
   }
 
   .uplodbox{
+    /*margin-left: 21px;*/
+    margin-left: 3px;
     background: white;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
     height: 300px;
     position: absolute;
+    margin-top: 360px;
     opacity: 0.8;
     box-shadow: 0px 0px 25px 10px #cccccc;
   }
@@ -324,12 +348,14 @@
     margin: 0 auto ;
     top: 40px;
   }
+
   .name_input input{
     border: none;
     background: none;
     border: 1px solid #cccccc;
     border-radius: 5px;
   }
+
   .upload_bottom{
     position: relative;
     top: 60px;

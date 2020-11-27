@@ -16,7 +16,8 @@ const routerOptions = [
   { path: '/Translate',component: 'Translate'},
   { path: '/luyin',component: 'luyin'},
   { path: '/aibook',component: 'AI_Book' },
-  { path: '/facere',component: 'face_re'}
+  { path: '/facere',component: 'face_re'},
+  // { path: '/picbz',component: 'picbz'},
 ]
 
 
