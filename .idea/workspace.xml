@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b83dc18-a59d-4c2c-9487-5f147e9b55c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/ai_intr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/ai_intr_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/dl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/dl_left.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/api.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AI_Book.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AI_Book.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/face_re.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/face_re.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +172,8 @@
       <workItem from="1604662709737" duration="44000" />
       <workItem from="1606272964193" duration="3155000" />
       <workItem from="1606380686905" duration="63000" />
-      <workItem from="1606446024744" duration="4155000" />
+      <workItem from="1606446024744" duration="4354000" />
+      <workItem from="1606811720580" duration="762000" />
     </task>
     <task id="LOCAL-00001" summary="over mnist and some yolo">
       <created>1581329050619</created>
@@ -458,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604390346058</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add face_re">
+      <created>1606456983692</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1606456983692</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,10 +502,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="636" y="420" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050@0.0.1920.1050" timestamp="1600911879566" />
-    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1604390344741">
+    <state x="664" y="99" key="CommitChangelistDialog2" timestamp="1606456981933">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1604390344741" />
+    <state x="664" y="99" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1606456981933" />
     <state x="1067" y="237" key="FileChooserDialogImpl" timestamp="1606380746598">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -510,10 +514,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="574" y="215" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604390627955" />
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604390653339">
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606456998737">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604390653339" />
+    <state x="824" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1606456998737" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

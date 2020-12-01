@@ -62,7 +62,7 @@
     data(){
       return{
         gz_books:[
-          {name:'深度学习入门',top_url:require('../assets/dl_int_top.jpg'),left_url:require('../assets/dl_int_left.jpg'),link:'http://aistudio.smartyg.com:8742/'},
+          {name:'',top_url:require('../assets/dl.png'),left_url:require('../assets/dl_left.png'),link:'http://aistudio.smartyg.com:8742/'},
           {name:'',top_url:require('../assets/ai_intr.png'),left_url:require('../assets/ai_intr_left.png'),link:'http://aistudio.smartyg.com:8743/'},
           {name:'敬请期待',top_url:require('../assets/nlp.png'),left_url:require('../assets/nlp_left.png'),link:''},
         ],
