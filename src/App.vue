@@ -45,7 +45,7 @@
     </div>
     <modalpage></modalpage>
   </div>
-</template>ubuntu
+</template>
 <script>
   import modal from '@/components/modal'
 export default {

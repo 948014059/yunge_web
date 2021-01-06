@@ -38,6 +38,7 @@
       }
     },
     methods:{
+
       show_img(event){
         let files=document.querySelector('#file').files[0]
         // this.imgDataUrl =this.getObjectURL(files)
@@ -45,6 +46,7 @@
         this.hidden_=true
         // this.post_image()
       },
+
       getObjectURL(file){
         let url=null
         if (window.createObjectURL != undefined){
@@ -58,6 +60,7 @@
         }
         return url
       },
+
       image_to_base64(file){
         let self =this
         var reader= new FileReader()
@@ -132,6 +135,7 @@
       fileclick(){
         document.querySelector('#file').click()
       },
+
       change_image(item){
         this.image_base64=item
         this.hidden_=true

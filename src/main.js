@@ -39,7 +39,7 @@ Viewer.setDefaults({
 
 Vue.prototype.$axios=axios
 //网络请求
-axios.defaults.headers.post["Content-type"] = "application/json"
+
 axios.defaults.baseURL=apiconfig.baseUrl
 
 Vue.config.productionTip = false
